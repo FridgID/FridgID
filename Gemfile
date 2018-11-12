@@ -11,6 +11,7 @@ gem 'redis'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'sprockets-rails', '>= 2.3.2'
 gem 'sassc-rails'
