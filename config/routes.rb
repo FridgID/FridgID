@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  resources :ingredients, only: :index
+  resources :recipes, only: [:index, :show]
   devise_for :users
-  root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'ingredients#index'
 end
