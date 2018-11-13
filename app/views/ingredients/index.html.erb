@@ -1,2 +1,10 @@
-<h1>Ingredients#index</h1>
-<p>Find me in app/views/ingredients/index.html.erb</p>
+<div class="search-container">
+  <div id="autocomplete-container">
+    <input type="text" placeholder="insert ingredient" autofocus="true" name="autofocus sample" id="autocomplete-input"></input>
+    <ul id="autocomplete-results"></ul>
+    <ul id="selected"></ul>
+  </div>
+</div>
+<%= javascript_pack_tag 'ing-auto' %>
+
+
