@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 2018_11_12_151028) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.string "season"
+    t.string "from_month"
+    t.string "to_month"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,10 +43,10 @@ ActiveRecord::Schema.define(version: 2018_11_12_151028) do
 
   create_table "saved_recipes", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "ingredient_id"
+    t.bigint "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ingredient_id"], name: "index_saved_recipes_on_ingredient_id"
+    t.index ["recipe_id"], name: "index_saved_recipes_on_recipe_id"
     t.index ["user_id"], name: "index_saved_recipes_on_user_id"
   end
 
@@ -72,7 +73,9 @@ ActiveRecord::Schema.define(version: 2018_11_12_151028) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "saved_recipes", "ingredients"
+  add_foreign_key "recipe_ingredients", "ingredients"
+  add_foreign_key "recipe_ingredients", "recipes"
+  add_foreign_key "saved_recipes", "recipes"
   add_foreign_key "saved_recipes", "users"
   add_foreign_key "selected_ingredients", "ingredients"
   add_foreign_key "selected_ingredients", "users"
