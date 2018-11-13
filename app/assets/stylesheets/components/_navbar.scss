@@ -13,6 +13,7 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+  margin-left: -20px;
 }
 
 /* User Avatar */
@@ -24,6 +25,7 @@
 
 /* Right section */
 .navbar-wagon-right {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,3 +77,18 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+/* navbar search field */
+
+.border-search-icon {
+  border: 0px solid white !important;
+}
+
+.fa {
+  color: $teal;
+}
+
+.fas {
+  color: $teal;
+}
+
