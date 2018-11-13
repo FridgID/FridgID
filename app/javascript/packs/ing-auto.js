@@ -32,7 +32,7 @@ function addDropDownListeners() {
 // events
 autocompleteInput.addEventListener("keyup", (event) => {
   // console.log("input: " + autocompleteInput.value);
-  fetch(`http://localhost:3000/ingredients.json?query=${autocompleteInput.value}`)
+  fetch(`/ingredients.json?query=${autocompleteInput.value}`)
     .then(response => response.json())
     .then((data) => {
       // console.log(data)
