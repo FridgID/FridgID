@@ -10,7 +10,7 @@ const autocompleteInput = document.getElementById("autocomplete-input");
 function autocomplete(val) {
   const people_return = [];
 
-  for (i = 0; i < ingredients.length; i++) {
+  for (let i = 0; i < ingredients.length; i++) {
     if (val === ingredients[i].slice(0, val.length)) {
       people_return.push(ingredients[i]);
     }
@@ -49,7 +49,7 @@ input.onkeyup = function(e) {
     autocomplete_results.innerHTML = '';
     items_to_show = autocomplete(input_val);
 
-    for (i = 0; i < items_to_show.length; i++) {
+    for (let i = 0; i < items_to_show.length; i++) {
       autocomplete_results.innerHTML += `<li id="item-id">` + items_to_show[i] + '</li>';
     }
     addDropDownListeners();
