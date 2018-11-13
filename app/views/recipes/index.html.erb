@@ -1,2 +1,38 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<div class="container">
+  <h1>Recipes (<%= @recipes.count %>)</h1>
+  <!-- Show the number of recipes in the generated search -->
+  <div class="row">
+    <div class="col-sm-12">
+      <% @recipes.each do |recipe| %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= recipe.photo %>);">
+          <div class="card-category">IN SEASON</div>
+          <div class="card-description">
+            <h2><%= recipe.title %></h2>
+            <p><%= recipe.description %></p>
+          </div>
+          <i class="fas fa-check-double card-stamp"></i>
+          <a class="card-link" href="#" ></a>
+        </div>
+      <% end %>
+    </div>
+
+
+
+    <div class="col-sm-12">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= YummlyScraper.display_recipe("Apple-Sorbet-517369").join %>);">
+        <div class="card-category">IN SEASON</div>
+        <div class="card-description">
+        </div>
+        <i class="fas fa-check-double card-stamp"></i>
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
