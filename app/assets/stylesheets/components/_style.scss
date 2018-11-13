@@ -1,0 +1,79 @@
+.title-h1 {
+  color: #55C3B6;
+  margin: 0px 0px 5px;
+  font-size: 2em;
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+}
+
+.title-h2 {
+  color: #55C3B6;
+  margin: 0px 0px 5px;
+  font-size: 1.5em;
+  font-family: rubik, sans-serif;
+  font-weight: 400;
+}
+
+.title-h3 {
+  color: #55C3B6;
+  margin: 0px 0px 5px;
+  font-size: 1em;
+  font-family: rubik, sans-serif;
+  font-weight: 400;
+}
+
+.title-h4 {
+  color: #55C3B6;
+  margin: 0px 0px 5px;
+  font-size: 1em;
+  font-family: rubik, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  margin: 0px 0px 20px;
+  letter-spacing: 0.2px;
+  line-height: 1.5rem;
+  font-family: rubik, sans-serif;
+  font-weight: 400;
+  font-size: .90rem;
+  color: #2D2D2D;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link-colour {
+  color: #DB633D;
+
+}
+
+.link-colour:hover{
+  color: #B45232;
+}
+
+.button-primary {
+  background-color: #DB633D !important;
+  border-color: #DB633D !important;
+  display: inline-block;
+  padding: 8px 20px 12px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  transition: all 150ms ease;
+}
+
+.button-primary:hover {
+  opacity: .8;
+}
+
+.form-checkbox {
+  background-color: #B45232 !important;
+}
+
+.check-font {
+  color: #2D2D2D !important;
+}
+
+
+
