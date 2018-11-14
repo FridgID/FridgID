@@ -1,31 +1,31 @@
 .title-h1 {
-  color: #55C3B6;
+  color: $teal;
   margin: 0px 0px 5px;
-  font-size: 2em;
+  font-size: 2rem;
   font-family: Karla, sans-serif;
   font-weight: 700;
 }
 
 .title-h2 {
-  color: #55C3B6;
+  color: $teal;
   margin: 0px 0px 5px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: rubik, sans-serif;
   font-weight: 400;
 }
 
 .title-h3 {
-  color: #55C3B6;
+  color: $dark-grey;
   margin: 0px 0px 5px;
-  font-size: 1em;
+  font-size: 1rem;
   font-family: rubik, sans-serif;
   font-weight: 400;
 }
 
 .title-h4 {
-  color: #55C3B6;
+  color: $teal;
   margin: 0px 0px 5px;
-  font-size: 1em;
+  font-size: 1rem;
   font-family: rubik, sans-serif;
   font-weight: 400;
 }
@@ -33,29 +33,29 @@
 p {
   margin: 0px 0px 20px;
   letter-spacing: 0.2px;
-  line-height: 1.5rem;
   font-family: rubik, sans-serif;
   font-weight: 400;
   font-size: .90rem;
-  color: #2D2D2D;
+  color: $darkest-grey;
 }
+
 
 ul {
   list-style-type: none;
 }
 
 .link-colour {
-  color: #DB633D;
+  color: $orange;
 
 }
 
 .link-colour:hover{
-  color: #B45232;
+  color: $hover-orange;
 }
 
 .button-primary {
-  background-color: #DB633D !important;
-  border-color: #DB633D !important;
+  background-color: $orange !important;
+  border-color: $orange !important;
   display: inline-block;
   padding: 8px 20px 12px;
   letter-spacing: 0.2px;
@@ -68,11 +68,11 @@ ul {
 }
 
 .form-checkbox {
-  background-color: #B45232 !important;
+  background-color: $hover-orange !important;
 }
 
 .check-font {
-  color: #2D2D2D !important;
+  color: $darkest-grey !important;
 }
 
 
