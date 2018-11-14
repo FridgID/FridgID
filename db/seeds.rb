@@ -17,7 +17,7 @@ Ingredient.create!(name: 'beetroot', from_month: 'january', to_month: 'december'
 slt = Ingredient.create!(name: 'salt', from_month: '', to_month: '') # season less!
 
 puts "create pumkin risotto..."
-pr = Recipe.create(title: 'pumpkin risotto', description: 'its nice', method: 'put in pumkin and make some food')
+pr = Recipe.create(title: 'pumpkin risotto', description: 'its nice', method: 'put in pumkin and make some food', photo: 'https://food-images.files.bbci.co.uk/food/recipes/pumpkinrisottowithcr_13723_16x9.jpg')
 
 puts "add pumpik risotto ingredients..."
 RecipeIngredient.create!(recipe_id: pr.id, ingredient_id: pkn.id)
