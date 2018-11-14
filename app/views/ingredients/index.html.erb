@@ -1,9 +1,11 @@
 <div class="search-container">
   <div id="autocomplete-container">
-    <input type="text" placeholder="insert ingredient" autofocus="true" name="autofocus sample" id="autocomplete-input"></input>
-    <ul id="autocomplete-results"></ul>
-    <ul id="selected"></ul>
+    <form action="#">
+      <input type="text" placeholder="insert ingredient" autofocus="true" id="autocomplete-input"></input>
+      <ul id="autocomplete-results"></ul>
+      <ul id="selected"></ul>
+      <button id="get-recipes-btn">Get recipes!</button>
+    </form>
   </div>
-  <button id="get-recipes-btn">Get recipes!</button>
 </div>
 <%= javascript_pack_tag 'ing-auto' %>
