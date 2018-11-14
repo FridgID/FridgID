@@ -1,10 +1,10 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
-  <!-- logo link should be to profile page when working -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+  <button class="btn btn-outline-secondary border border-search-icon" type="button">
+    <%= link_to recipes_path, class: "navbar-wagon-brand" do %>
+    <i class="fa fa-search"></i>
+  </button>
+  <%= image_tag "logo.png", height: 50 %>
   <% end %>
-
   <i class="far fa-user"></i>
 </div>
 
