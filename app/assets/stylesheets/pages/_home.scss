@@ -1,70 +1,76 @@
-.search-container {
-  ul, li {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    background-color: lightgrey;
-  }
-
-  html {
-    line-height: 1;
-  }
-
-  #autocomplete-container {
-    width: 95%;
-    margin: 50px auto;
-  }
-  #autocomplete-container #autocomplete-input {
-    background: transparent;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    width: 100%;
-    padding: 20px 15px;
-    border: 2px solid rgba(77, 77, 77, 0.6);
-    border-radius: 3px 3px 0px 0px;
-    background-color: lightgrey;
-    outline: none;
-    // color: red;
-    font-size: 20px;
-  }
-
-  #autocomplete-container #autocomplete-input:focus {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  #autocomplete-results {
-    display: none;
-    width: 100%;
-    margin-top: -2px;
-    color: #FFFFFF;
-  }
-  #autocomplete-results li {
-    width: 100%;
-    padding: 20px 15px;
-    border: 2px solid rgba(77, 77, 77, 0.6);
-  }
-  #autocomplete-results li:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  #selected li {
-    width: 100%;
-    padding: 20px 15px;
-    margin: 20px 0px;
-    border-right: 2px solid rgba(255, 255, 255, 0.6);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-    border-left: 2px solid rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-  }
-  #selected li:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
+ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  background-color: #DB633D;
+}
+
+html {
+  line-height: 1;
+}
+
+#autocomplete-container {
+  width: 90%;
+  margin: 50px auto;
+  color: #FFFFFF;
+}
+
+#autocomplete-container #autocomplete-input {
+  background: transparent;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 20px 15px;
+  border: 2px solid #B45232 ;
+  border-radius: 3px 3px 0px 0px;
+  background-color: #DB633D;
+  outline: none;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+#autocomplete-container #autocomplete-input:focus {
+  background: #DB633D;
+  color: #FFFFFF;
+}
+
+#autocomplete-results {
+  display: none;
+  width: 100%;
+  margin-top: -2px;
+  color: #FFFFFF;
+}
+#autocomplete-results li {
+  width: 100%;
+  padding: 20px 15px;
+  border: 2px solid #B45232;
+}
+#autocomplete-results li:hover {
+  background: #B45232;
+}
+
+#selected li {
+  width: 100%;
+  padding: 20px 15px;
+  margin: 20px 0px;
+  border-right: 2px solid #B45232;
+  border-bottom: 2px solid #B45232;
+  border-left: 2px solid #B45232;
+  border-radius: 5px;
+}
+#selected li:hover {
+  background: #B45232;
+}
+
+.insert-color {
+  color: #FFFFFF !important;
+}
+
 
