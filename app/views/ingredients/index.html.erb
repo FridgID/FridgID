@@ -1,5 +1,12 @@
 <%= render 'shared/navbar_results' %>
-
-<h1 class="title-h1">Pages#home</h1>
-<h2 class="title-h2"> H2 title</h2>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="search-container">
+  <div id="autocomplete-container">
+    <form action="#">
+      <input type="text" placeholder="insert ingredient" autofocus="true" id="autocomplete-input"></input>
+      <ul id="autocomplete-results"></ul>
+      <ul id="selected"></ul>
+      <button id="get-recipes-btn">Get recipes!</button>
+    </form>
+  </div>
+</div>
+<%= javascript_pack_tag 'ing-auto' %>
