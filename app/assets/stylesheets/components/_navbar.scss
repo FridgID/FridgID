@@ -11,9 +11,13 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+
+.navbar-wagon-brand-index {
+  margin: 0px 70px;
+}
+.navbar-wagon-brand {
   height: 50px;
-  margin-left: -20px;
+  margin: 0px -15px;
 }
 
 /* User Avatar */
@@ -28,7 +32,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
 }
 
 /* Basic navbar item */
@@ -85,10 +89,14 @@
 }
 
 .fa {
-  color: $teal;
+  color: white;
 }
 
+.far {
+  color: white;
+}
 .fas {
-  color: $teal;
+  color: white;
+
 }
 
