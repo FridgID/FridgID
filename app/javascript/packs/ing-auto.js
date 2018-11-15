@@ -43,6 +43,7 @@ function getSelectedItems() {
 
 // events
 getButton.addEventListener("click", (event) => {
+  event.preventDefault(); // needed for safari and chrome or they go to the form action #
   window.location.href = `recipes/?i=${getSelectedItems().join('-')}`;
 });
 
