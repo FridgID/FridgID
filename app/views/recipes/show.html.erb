@@ -3,10 +3,10 @@
 <button id="btn-method">COOK IT</button>
 <button id="btn-ingrs">INGREDIENTS</button>
 <div id="page-method" style="display: none;">
-  <%= render 'method' %>
+  <%= render 'method', recipe: @recipe %>
 </div>
 <div id="page-ingredients">
-  <%= render 'ingredients' %>
+  <%= render 'ingredients', ingredients: @ingredients %>
 </div>
 
 <%= javascript_pack_tag 'results' %>
