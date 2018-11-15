@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
     # TODO: add pages or something like that
     # for now diplay max 20 recipes
     max_per_page = 20
-    if params[:i]
+    if params[:i].present?
       ingredients = params[:i].split('-')
 
       sql_query = "ingredients.name in (:query)"
