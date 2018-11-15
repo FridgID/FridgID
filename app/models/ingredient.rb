@@ -1,4 +1,8 @@
 class Ingredient < ApplicationRecord
+  IN_SEASON = 0
+  NEUTRAL = 1
+  OUT_SEASON = 2
+
   # use me :)
   def seasonal
     return 1 if from_month == '' || to_month == ''
@@ -6,6 +10,19 @@ class Ingredient < ApplicationRecord
     from = Date::MONTHNAMES.index(from_month)
     to = Date::MONTHNAMES.index(to_month)
     return Ingredient.season_month?(from, to, Date.today.month) ? 2 : 0
+  end
+
+  def self.season_stats(ingredients)
+    oni = [0, 0, 0] # oni (out neutral in) season
+    ingredients.each do |ing|
+      if ing.seasonal == IN_SEASON
+        oni[IN_SEASON] += 1
+      elsif ing.seasonal == OUT_SEASON
+        oni[OUT_SEASON] += 1
+      else # ing.seasonal == NEUTRAL
+        oni[NEUTRAL] += 1
+      end
+    end
   end
 
   # only a helper
