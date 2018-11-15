@@ -34,4 +34,3 @@ class RecipesController < ApplicationController
     # define base url - http://api.yummly.com/v1/api/recipes?_app_id=app-id&_app_key=app-key&your _search_parameters
   end
 end
-

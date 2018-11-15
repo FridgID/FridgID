@@ -1,9 +1,11 @@
 class Ingredient < ApplicationRecord
   # use me :)
-  def seasonal?
+  def seasonal
+    return 1 if from_month == '' || to_month == ''
+
     from = Date::MONTHNAMES.index(from_month)
     to = Date::MONTHNAMES.index(to_month)
-    return Ingredient.season_month?(from, to, Date.today.month)
+    return Ingredient.season_month?(from, to, Date.today.month) ? 2 : 0
   end
 
   # only a helper
