@@ -25,6 +25,7 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @ingredients = @recipe.ingredients
+    @stats = Ingredient.season_stats(@ingredients)
   end
 
   def search

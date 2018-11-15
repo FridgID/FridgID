@@ -1,4 +1,6 @@
 <h1>ingredients</h1>
+
+<div id="ing-chart"></div>
 <ul>
   <% ingredients.each do |ing| %>
     <li>
@@ -6,3 +8,21 @@
     </li>
   <% end %>
 </ul>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    const data = google.visualization.arrayToDataTable([
+      ['Season', 'ingredients'],
+      ['seasonal', <%= @stats[2] %>],
+      ['out of season', <%= @stats[0] %>],
+      ['neutral', <%= @stats[1] %>]
+    ]);
+    const options = {'title':'ingredients seasonality', 'width':400, 'height':400};
+    const chart = new google.visualization.PieChart(document.getElementById('ing-chart'));
+    chart.draw(data, options);
+  }
+</script>

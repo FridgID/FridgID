@@ -23,6 +23,7 @@ class Ingredient < ApplicationRecord
         oni[NEUTRAL] += 1
       end
     end
+    return oni
   end
 
   # only a helper
