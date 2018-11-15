@@ -59,7 +59,7 @@ autocompleteInput.addEventListener("keyup", (event) => {
           // console.log("[+] ing '" + ing + "' is selcted already");
         } else {
           // console.log("[-] ing '" + ing + "' is not selected yet")
-          autocomplete_results.innerHTML += '<li id="item-id">' + ing + '</li>';
+          autocomplete_results.innerHTML += '<li id="item-id">' + ing.toUpperCase() + '</li>';
         }
       });
       addDropDownListeners();
