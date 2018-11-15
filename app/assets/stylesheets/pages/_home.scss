@@ -9,7 +9,8 @@ ul {
 }
 
 li {
-  background-color: #DB633D;
+  background-color: #55C3B6;
+
 }
 
 html {
@@ -26,51 +27,57 @@ html {
   background: transparent;
   -moz-appearance: none;
   -webkit-appearance: none;
-  width: 100%;
+  width: 96%;
   padding: 20px 15px;
-  border: 2px solid #B45232 ;
-  border-radius: 3px 3px 0px 0px;
-  background-color: #DB633D;
+  border: 2px solid #46A095 ;
+  border-radius: 3px;
+  background-color: #46A095;
   outline: none;
   font-size: 16px;
   color: #FFFFFF;
+  &::placeholder {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
 }
 
 #autocomplete-container #autocomplete-input:focus {
-  background: #DB633D;
-  color: #FFFFFF;
+  background: #55C3B6;
 }
 
 #autocomplete-results {
   display: none;
-  width: 100%;
+  width: 96%;
   margin-top: -2px;
   color: #FFFFFF;
 }
 #autocomplete-results li {
   width: 100%;
   padding: 20px 15px;
-  border: 2px solid #B45232;
+  border: 2px solid #46A095;
 }
 #autocomplete-results li:hover {
-  background: #B45232;
+  background: #46A095;
 }
 
 #selected li {
-  width: 100%;
-  padding: 20px 15px;
+  width: 48%;
+  padding: 16px 15px;
   margin: 20px 0px;
-  border-right: 2px solid #B45232;
-  border-bottom: 2px solid #B45232;
-  border-left: 2px solid #B45232;
-  border-radius: 5px;
+  border-right: 2px solid #46A095;
+  border-bottom: 2px solid #46A095;
+  border-left: 2px solid #46A095;
+  border-radius: 3px;
+  display: inline-block;
+  content: 'x';
 }
 #selected li:hover {
-  background: #B45232;
+  background: #46A095;
 }
 
-.insert-color {
-  color: #FFFFFF !important;
+.image-home {
+
 }
+
 
 
