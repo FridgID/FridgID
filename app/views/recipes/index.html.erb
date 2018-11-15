@@ -16,11 +16,11 @@
         </div>
         <div class="card-details">
           <h4 class="title-h4"><%= recipe.shortened_title %></h4>
-            <div class="stats">
+          <div class="stats">
             <p><i class="fas fa-check"></i> <%= recipe.ingredients.count %>/<%= recipe.ingredients.count %> ingredients match </p>
             <p><i class="fas fa-thermometer-half"></i> <%= (recipe.ingredients.count / recipe.ingredients.count) * 100 %>% in season</p>
           </div>
-          <a class="card-link" href="#" ></a>
+          <%= link_to "", recipe_path(recipe), class: "card-link" %>
         </div>
       </div>
     <% end %>
