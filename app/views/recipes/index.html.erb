@@ -1,20 +1,30 @@
 <%= render 'shared/navbar_index' %>
 <div class="container">
-  <h1>Recipes (<%= @recipes.count %>)</h1>
-  <!-- Show the number of recipes in the generated search -->
+  <h2 class="title-h2">
+    <% if @recipes.count == 0 %>
+    <%= "Sorry, we could not find any recipes that match your ingredients!" %>
+    <% else %>
+    <%= "We found #{@recipes.count} recipes for you..." %>
+    <% end %>
+  </h2>
+  <div class="btn button-primary btn-sm btn-block">FILTER</div>  <!-- Show the number of recipes in the generated search. How is the controller action recipe index going to work, what is "all recipes" for a search?-->
   <div class="row">
-    <div class="col-sm-12">
-      <% @recipes.each do |recipe| %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= recipe.photo %>);">
-          <div class="card-category">IN SEASON</div>
-          <div class="card-description">
-            <h2><%= recipe.title %></h2>
-            <p><%= recipe.description %></p>
-          </div>
-          <i class="fas fa-check-double card-stamp"></i>
-          <a class="card-link" href="#" ></a>
+    <% @recipes.each do |recipe| %>
+      <div class="card">
+        <div class="card-image" style="background-image: linear-gradient(rgba(250,250,250,0.3), rgba(0,0,0,0)), url(<%= recipe.photo %>);">
+          <div class="card-like"><i class="far fa-heart"></i></div>
         </div>
-      <% end %>
-    </div>
+        <div class="card-details">
+          <h4 class="title-h4"><%= recipe.shortened_title %></h4>
+          <div class="stats">
+            <p><i class="fas fa-check"></i> <%= recipe.ingredients.count %>/<%= recipe.ingredients.count %> ingredients match </p>
+            <p><i class="fas fa-thermometer-half"></i> <%= (recipe.ingredients.count / recipe.ingredients.count) * 100 %>% in season</p>
+          </div>
+          <%= link_to "", recipe_path(recipe), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
+
+
