@@ -1,4 +1,18 @@
 <%= render 'shared/navbar_show' %>
 
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<button id="btn-method">COOK IT</button>
+<button id="btn-ingrs">INGREDIENTS</button>
+<div id="content">
+  <!-- content inserted by js -->
+</div>
+
+<recipe
+  id="recipe-data"
+  data-title="<%= @recipe.title %>"
+  data-desc="<%= @recipe.description %>"
+  data-method="<%= @recipe.method %>"
+  data-photo="<%= @recipe.photo %>"
+  data-ingredients="<%= @ingr_data %>">
+</recipe>
+
+<%= javascript_pack_tag 'results' %>
