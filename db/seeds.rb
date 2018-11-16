@@ -11,7 +11,7 @@ User.create!(email: 'test@test.com', password: 'password')
 
 puts "create ingredients..."
 pkn = Ingredient.create!(name: 'pumpkin', from_month: 'August', to_month: 'December')
-Ingredient.create!(name: 'apple', from_month: 'October', to_month: 'February')
+app = Ingredient.create!(name: 'apple', from_month: 'October', to_month: 'February')
 stw = Ingredient.create!(name: 'strawberry', from_month: 'May', to_month: 'September')
 Ingredient.create!(name: 'beetroot', from_month: 'January', to_month: 'December')
 ban = Ingredient.create!(name: 'banana', from_month: '', to_month: '')
@@ -20,6 +20,17 @@ bef = Ingredient.create!(name: 'beef', from_month: '', to_month: '')
 brc = Ingredient.create!(name: 'broccoli', from_month: 'July', to_month: 'October')
 slt = Ingredient.create!(name: 'salt', from_month: '', to_month: '') # season less!
 sgr = Ingredient.create!(name: 'sugar', from_month: '', to_month: '') # season less!
+oni = Ingredient.create!(name: 'onion', from_month: 'January', to_month: 'December')
+
+# Onion Apple cake
+puts "create Onion Apple cake..."
+oac = Recipe.create(
+  title: 'Onion Apple Cake',
+  description: 'Bad recipe for good days',
+  method: 'Take a cake. Then put an apple and an onion on it. BAM! done.',
+  photo: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Apple_pie.jpg')
+RecipeIngredient.create!(recipe_id: oac.id, ingredient_id: app.id)
+RecipeIngredient.create!(recipe_id: oac.id, ingredient_id: oni.id)
 
 # Curreied Pumkin Soup
 puts "create Curried Pumpkin Soup..."
@@ -38,7 +49,7 @@ RecipeIngredient.create!(recipe_id: et.id, ingredient_id: sgr.id)
 
 # Pumkin Risotto
 puts "create Pumkin Risotto..."
- pr = Recipe.create(title: 'Pumpkin Risotto', description: 'its nice', method: 'Put in pumkin and make some food', photo: 'https://food-images.files.bbci.co.uk/food/recipes/pumpkinrisottowithcr_13723_16x9.jpg')
+pr = Recipe.create(title: 'Pumpkin Risotto', description: 'its nice', method: 'Put in pumkin and make some food', photo: 'https://food-images.files.bbci.co.uk/food/recipes/pumpkinrisottowithcr_13723_16x9.jpg')
 RecipeIngredient.create!(recipe_id: pr.id, ingredient_id: pkn.id)
 RecipeIngredient.create!(recipe_id: pr.id, ingredient_id: slt.id)
 

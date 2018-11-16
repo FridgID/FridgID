@@ -12,18 +12,23 @@
     <h4 class="title-h4">Filter <i class="fas fa-filter"></i></h4>
   </div>
   <div class="row">
-    <% @recipes.each do |recipe| %>
+    <% @recipes.each do |r| %>
       <div class="card">
-        <div class="card-image" style="background-image: linear-gradient(rgba(250,250,250,0.3), rgba(0,0,0,0)), url(<%= recipe.photo %>);">
+        <div class="card-image" style="background-image: linear-gradient(rgba(250,250,250,0.3), rgba(0,0,0,0)), url(<%= r.photo %>);">
           <div class="card-like"><i class="far fa-heart"></i></div>
         </div>
         <div class="card-details">
-          <h4 class="title-h4"><%= recipe.shortened_title %></h4>
+          <h4 class="title-h4"><%= r.shortened_title %></h4>
           <div class="stats">
-            <p><i class="fas fa-check"></i> <%= recipe.ingredients.count %>/<%= recipe.ingredients.count %> ingredients match </p>
-            <p><i class="fas fa-seedling"></i> <%= (recipe.ingredients.count / recipe.ingredients.count) * 100 %>% in season</p>
+            <% if @selected_ingrs %>
+              <p>
+                <i class="fas fa-check"></i>
+                <%= r.ingredients_match(@selected_ingrs) %>/<%= r.ingredients.count %> ingredients match
+              </p>
+            <% end %>
+            <p><i class="fas fa-seedling"></i><%= r.seasonal_score %>% in season</p>
           </div>
-          <%= link_to "", recipe_path(recipe), class: "card-link" %>
+          <%= link_to "", recipe_path(r), class: "card-link" %>
         </div>
       </div>
     <% end %>
