@@ -63,9 +63,20 @@
   border: none;
 }
 
+// QUICK hack on ol for presentation
+// TODO: rework that code and make it cleaner
 ol {
-  text-align: left;
+  width: 300px;
+}
 
+ol li {
+  text-align: left;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 
