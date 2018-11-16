@@ -1,11 +1,11 @@
 class Ingredient < ApplicationRecord
-  IN_SEASON = 0
+  IN_SEASON = 2
   NEUTRAL = 1
-  OUT_SEASON = 2
+  OUT_SEASON = 0
 
   # use me :)
   def seasonal
-    return 1 if from_month == '' || to_month == ''
+    return 1 if from_month == '' || to_month == '' # 1=neutral
 
     from = Date::MONTHNAMES.index(from_month)
     to = Date::MONTHNAMES.index(to_month)
