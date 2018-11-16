@@ -74,11 +74,35 @@ ol li {
   width: 100%;
   height: 50px;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 10px;
 }
 
+.checkbox {
+  align-self: flex-start;
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #fff;
+}
+
+.x1 {
+  background-color: $teal;
+  height: 10px;
+  position: relative;
+  top: 15px;
+  transform: rotate(45deg);
+}
+
+.x2 {
+  background-color: $teal;
+  height: 10px;
+  position: relative;
+  top: 5px;
+  transform: rotate(-45deg);
+}
 
 
 

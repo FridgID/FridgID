@@ -7,10 +7,22 @@
     <% else %>
       <li style="background-color: #396CC6">
     <% end %>
-      <%= ing.name %>
+      <div class="checkbox">
+        <div class="x1"></div>
+        <div class="x2"></div>
+      </div>
+      <%= ing.name.upcase %>
     </li>
   <% end %>
 </ol>
 
+<script>
+  const bx = document.querySelectorAll('.checkbox');
 
-
+  for (let i = 0; i < bx.length; i++) {
+    bx[i].addEventListener('click', (e) => {
+      bx[i].children[0].classList.toggle("x1")
+      bx[i].children[1].classList.toggle("x2")
+    });
+  }
+</script>
