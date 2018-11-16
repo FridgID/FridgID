@@ -6,6 +6,7 @@
     <% else %>
       <%= " YOUR RECIPES (#{@recipes.count}) " %>
     <% end %>
+    <% raise %>
   </h1>
   <div class="filter">
     <h4 class="title-h4">Filter <i class="fas fa-filter"></i></h4>
@@ -20,7 +21,7 @@
           <h4 class="title-h4"><%= recipe.shortened_title %></h4>
           <div class="stats">
             <p><i class="fas fa-check"></i> <%= recipe.ingredients.count %>/<%= recipe.ingredients.count %> ingredients match </p>
-            <p><i class="fas fa-thermometer-half"></i> <%= (recipe.ingredients.count / recipe.ingredients.count) * 100 %>% in season</p>
+            <p><i class="fas fa-seedling"></i> <%= (recipe.ingredients.count / recipe.ingredients.count) * 100 %>% in season</p>
           </div>
           <%= link_to "", recipe_path(recipe), class: "card-link" %>
         </div>
