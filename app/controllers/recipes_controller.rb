@@ -6,19 +6,20 @@ class RecipesController < ApplicationController
     # for now diplay max 20 recipes
     max_per_page = 20
     if params[:i].present?
-      ingredients = params[:i].downcase.split('-')
+      @selected_ingrs = params[:i].downcase.split('-')
 
       sql_query = "ingredients.name in (:query)"
-      @recipes = Recipe.joins(:ingredients).where(sql_query, query: ingredients).distinct.limit(max_per_page)
+      @recipes = Recipe.joins(:ingredients).where(sql_query, query: @selected_ingrs).distinct.limit(max_per_page)
 
       # same but selfmade with nice sqlinjection features
       # insecure_query = "SELECT DISTINCT recipes.* FROM recipes, ingredients, recipe_ingredients
       #   WHERE ingredients.id = recipe_ingredients.ingredient_id
       #   AND recipes.id = recipe_ingredients.recipe_id
-      #   AND ingredients.name IN (#{ingredients.map { |i| "'" + i.to_s + "'" }.join(', ')})"
+      #   AND ingredients.name IN (#{@selected_ingrs.map { |i| "'" + i.to_s + "'" }.join(', ')})"
       # @recipes = Recipe.find_by_sql(insecure_query)
     else
       @recipes = Recipe.all.limit(max_per_page)
+      @selected_ingrs = nil
     end
   end
 
