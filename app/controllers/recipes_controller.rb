@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
     # TODO: add pages or something like that
     # for now diplay max 20 recipes
     max_per_page = 20
+    @dash_ingrs = params[:i]
     if params[:i].present?
       @selected_ingrs = params[:i].downcase.split('-')
 
