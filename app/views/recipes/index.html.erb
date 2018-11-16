@@ -25,7 +25,7 @@
                 <%= r.ingredients_match(@selected_ingrs) %>/<%= r.ingredients.count %> ingredients match
               </p>
             <% end %>
-            <p><i class="fas fa-thermometer-half"></i> <%= (r.ingredients.count / r.ingredients.count) * 100 %>% in season</p>
+            <p><i class="fas fa-thermometer-half"></i><%= r.seasonal_score %>% in season</p>
           </div>
           <%= link_to "", recipe_path(r), class: "card-link" %>
         </div>

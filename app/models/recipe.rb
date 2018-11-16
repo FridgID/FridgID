@@ -14,4 +14,12 @@ class Recipe < ApplicationRecord
     # puts "selected: #{selected_ingrs}"
     # puts "common: #{com}"
   end
+
+  def seasonal_score
+    score = 0
+    ingredients.each do |ingr|
+      score += ingr.seasonal
+    end
+    (ingredients.count * 2 / score) * 10
+  end
 end
