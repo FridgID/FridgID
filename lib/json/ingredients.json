@@ -1,0 +1,17 @@
+[
+  {
+    "name": "apple",
+    "from_month": "October",
+    "to_month": "February"
+  },
+  {
+    "name": "beetroot",
+    "from_month": "January",
+    "to_month": "December"
+  },
+  {
+    "name": "carrot",
+    "from_month": "July",
+    "to_month": "April"
+  }
+]
