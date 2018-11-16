@@ -10,14 +10,14 @@ puts "create test user..."
 User.create!(email: 'test@test.com', password: 'password')
 
 puts "create ingredients..."
-pkn = Ingredient.create!(name: 'pumpkin', from_month: 'august', to_month: 'december')
-Ingredient.create!(name: 'apple', from_month: 'october', to_month: 'february')
-stw = Ingredient.create!(name: 'strawberry', from_month: 'may', to_month: 'september')
-Ingredient.create!(name: 'beetroot', from_month: 'january', to_month: 'december')
+pkn = Ingredient.create!(name: 'pumpkin', from_month: 'August', to_month: 'December')
+Ingredient.create!(name: 'apple', from_month: 'October', to_month: 'February')
+stw = Ingredient.create!(name: 'strawberry', from_month: 'May', to_month: 'September')
+Ingredient.create!(name: 'beetroot', from_month: 'January', to_month: 'December')
 ban = Ingredient.create!(name: 'banana', from_month: '', to_month: '')
-glc = Ingredient.create!(name: 'garlic', from_month: 'june', to_month: 'october')
+glc = Ingredient.create!(name: 'garlic', from_month: 'June', to_month: 'October')
 bef = Ingredient.create!(name: 'beef', from_month: '', to_month: '')
-brc = Ingredient.create!(name: 'broccoli', from_month: 'july', to_month: 'october')
+brc = Ingredient.create!(name: 'broccoli', from_month: 'July', to_month: 'October')
 slt = Ingredient.create!(name: 'salt', from_month: '', to_month: '') # season less!
 sgr = Ingredient.create!(name: 'sugar', from_month: '', to_month: '') # season less!
 

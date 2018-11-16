@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
     # for now diplay max 20 recipes
     max_per_page = 20
     if params[:i].present?
-      ingredients = params[:i].split('-')
+      ingredients = params[:i].downcase.split('-')
 
       sql_query = "ingredients.name in (:query)"
       @recipes = Recipe.joins(:ingredients).where(sql_query, query: ingredients).distinct.limit(max_per_page)
@@ -23,6 +23,9 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
+    @ingredients = @recipe.ingredients
+    @stats = Ingredient.season_stats(@ingredients)
   end
 
   def search
@@ -32,4 +35,3 @@ class RecipesController < ApplicationController
     # define base url - http://api.yummly.com/v1/api/recipes?_app_id=app-id&_app_key=app-key&your _search_parameters
   end
 end
-
