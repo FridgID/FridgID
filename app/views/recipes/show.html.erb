@@ -1,12 +1,28 @@
 <%= render 'shared/navbar_show' %>
-
-<button id="btn-method">COOK IT</button>
-<button id="btn-ingrs">INGREDIENTS</button>
-<div id="page-method" style="display: none;">
-  <%= render 'method', recipe: @recipe %>
-</div>
-<div id="page-ingredients">
-  <%= render 'ingredients', ingredients: @ingredients %>
+<div class="container">
+  <div class="row show-head">
+    <div class="col-xs-12">
+      <div id="page-method-head" style="display: none;">
+        <%= render 'method_head', recipe: @recipe %>
+      </div>
+      <div id="page-ingredients-head">
+        <%= render 'ingredients_head', ingredients: @ingredients %>
+      </div>
+    </div>
+  </div>
+  <div class="row show-buttons">
+    <button id="btn-method">COOK IT</button>
+    <button id="btn-ingrs">INGREDIENTS</button>
+  </div>
+  <div class="row show-body">
+    <div id="page-method" style="display: none;">
+      <%= render 'method', recipe: @recipe %>
+    </div>
+    <div id="page-ingredients">
+      <%= render 'ingredients', ingredients: @ingredients %>
+    </div>
+  </div>
 </div>
 
 <%= javascript_pack_tag 'results' %>
+

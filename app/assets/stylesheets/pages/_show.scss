@@ -1,0 +1,74 @@
+.show-head {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.show-buttons {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+
+.show-body {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.method-description {
+  text-align: left;
+  line-height: 1.8em;
+}
+
+.title-h4-show {
+  color: white;
+  background-color: $teal;
+  margin: 28px -6px 8px;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.title-h4-method {
+  color: white;
+  background-color: $teal;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  display: inline-block;
+  font-size: 1em;
+}
+
+#btn-method {
+  color: white;
+  background-color: $teal;
+  margin: 10px 5px;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+  border: none;
+}
+
+#btn-ingrs {
+  color: white;
+  background-color: $teal;
+  margin: 10px 5px;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+  border: none;
+}
+
+ol {
+  text-align: left;
+
+}
+
+
+
+
+

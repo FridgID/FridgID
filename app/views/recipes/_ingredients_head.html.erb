@@ -1,0 +1,20 @@
+<h4 class="title-h4-show"><%= @recipe.title.upcase %></h4>
+<div id="ing-chart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    const data = google.visualization.arrayToDataTable([
+      ['Season', 'ingredients'],
+      ['In season', <%= @stats[2] %>],
+      ['Not in season', <%= @stats[0] %>],
+      ['Without season', <%= @stats[1] %>]
+    ]);
+    const options = {'width':300, 'height':200};
+    const chart = new google.visualization.PieChart(document.getElementById('ing-chart'));
+    chart.draw(data, options);
+  }
+</script>
