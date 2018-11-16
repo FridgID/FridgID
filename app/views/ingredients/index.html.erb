@@ -1,26 +1,24 @@
 <%= render 'shared/navbar_index' %>
 
-
 <div class="container">
- <div class="row">
-  <div class="col-xs-12 col-md-6">
-  <h2 class="title-index">WHAT TO EAT!</h2>
-    <div id="autocomplete-container">
-      <form action="#">
-        <input type="text" placeholder="&#xf0fe     Add Ingredients" autofocus="true" id="autocomplete-input"></input>
-        <p class="chosen-ingred">Chosen ingredients:</p>
-        <ul id="autocomplete-results"></ul>
-        <ul id="selected"></ul>
-        <button id="get-recipes-btn">FIND YOUR RECIPE</button>
-      </form>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6">
+      <h2 class="title-index">WHAT TO EAT!</h2>
+       <div id="autocomplete-container">
+        <form action="#">
+          <input type="text" placeholder="&#xf0fe     Add Ingredients" autofocus="true" id="autocomplete-input"></input>
+          <h5 class="chosen-ingred">Chosen ingredients:</h5>
+          <ul id="autocomplete-results"></ul>
+          <ul id="selected"></ul>
+          <button id="get-recipes-btn">FIND YOUR RECIPE</button>
+        </form>
+      </div>
+      <%= image_tag 'food.png', class: 'image-food' %>
     </div>
   </div>
 
-  <img class="image-food" src="app/assets/images/food.png"  alt="">
-
-
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-6">
         <h3 class="header-index">GET IN SEASON</h3>
         <p>Want to help the planet and your own pocket. FrigdID wants to help you. Simply search what ingredients you have in your fridge and FridgID will find a recipe for you.</p>
         <p>Not only will FridgID match your ingredients to a recipe but also will provide recipes of what is in season and reduce your global imprint.</p>
@@ -33,3 +31,4 @@
 
 
 <%= javascript_pack_tag 'ing-auto' %>
+
