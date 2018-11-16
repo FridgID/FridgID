@@ -1,3 +1,11 @@
+class NoDash < ActiveModel::Validator
+  def validate(record)
+    if record.name.include? '-' # rubocop:disable all
+      record.errors[:name] << 'No dash in ingredient name allowed!'
+    end
+  end
+end
+
 class Ingredient < ApplicationRecord
   IN_SEASON = 2
   NEUTRAL = 1
@@ -12,7 +20,7 @@ class Ingredient < ApplicationRecord
     return Ingredient.season_month?(from, to, Date.today.month) ? 2 : 0
   end
 
-  def self.season_stats(ingredients)
+  def self.season_stats(ingredients) # rubocop:disable Metrics/MethodLength
     oni = [0, 0, 0] # oni (out neutral in) season
     ingredients.each do |ing|
       if ing.seasonal == IN_SEASON
@@ -39,6 +47,8 @@ class Ingredient < ApplicationRecord
   has_many :recipe_ingredients
   has_many :recipes, through: :recipe_ingredients
 
+  include ActiveModel::Validations
+  validates_with NoDash
   validates :name, uniqueness: true
   validates :from_month, inclusion: {
     in: [
