@@ -25,6 +25,7 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @ingredients = @recipe.ingredients
+    @stats = Ingredient.season_stats(@ingredients)
   end
 
   def search
@@ -34,4 +35,3 @@ class RecipesController < ApplicationController
     # define base url - http://api.yummly.com/v1/api/recipes?_app_id=app-id&_app_key=app-key&your _search_parameters
   end
 end
-
