@@ -15,6 +15,7 @@
   padding: 6px;
 }
 
+
 #autocomplete-input {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -65,10 +66,11 @@ li {
 }
 
 #autocomplete-results li {
-  width: 40%;
+  padding: 5px 8px 3px 3px;
   margin: 5px 2px;
-  padding: 10px 10px;
-  border: 2px solid $orange;
+  border-right: 2px solid $orange;
+  border-bottom: 2px solid $orange;
+  border-left: 2px solid $orange;
   border-radius: 3px;
 }
 
@@ -115,111 +117,33 @@ li {
   margin: 80px 50px;
 }
 
-// #autocomplete-container {
-//   width: 90%;
-//   margin: 50px auto;
-//   color: #FFFFFF;
-// }
+.fa-pagelines {
+  color: $teal;
+}
 
-// #autocomplete-container {
-//   background: transparent;
-//   -moz-appearance: none;
-//   -webkit-appearance: none;
-//   width: 96%;
-//   padding: 20px 15px;
-//   border: 2px solid #46A095 ;
-//   border-radius: 3px;
-//   background-color: #46A095;
-//   outline: none;
-//   font-size: 16px;
-//   color: #FFFFFF;
-//   &::placeholder {
-//     color: #FFFFFF;
-//     font-weight: bold;
-//   }
+.selected-recipes {
+  width: 100%;
+  color: $teal;
+  font-weight: 400;// this should be 500 or 600 font weight
+  margin: 20px 2px;
+  display: flex;
+  justify-content: center;
+}
+
+// .fa-globe {
+//   color: $teal;
 // }
 
 
-
-
-
-// ul, li {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
+// .fa-truck-pickup {
+//   color: $teal;
 // }
 
-// ul {
-//   list-style: none;
+// .fa-dollar-sign {
+//   color: $teal;
 // }
 
-//
 
-// html {
-//   line-height: 1;
-// }
-
-// #autocomplete-container {
-//   width: 90%;
-//   margin: 50px auto;
-//   color: #FFFFFF;
-// }
-
-// #autocomplete-container #autocomplete-input {
-//   background: transparent;
-//   -moz-appearance: none;
-//   -webkit-appearance: none;
-//   width: 96%;
-//   padding: 20px 15px;
-//   border: 2px solid #46A095 ;
-//   border-radius: 3px;
-//   background-color: #46A095;
-//   outline: none;
-//   font-size: 16px;
-//   color: #FFFFFF;
-//   &::placeholder {
-//     color: #FFFFFF;
-//     font-weight: bold;
-//   }
-// }
-
-// #autocomplete-container #autocomplete-input:focus {
-//   background: #55C3B6;
-// }
-
-// #autocomplete-results {
-//   display: none;
-//   width: 96%;
-//   margin-top: -2px;
-//   color: #FFFFFF;
-// }
-// #autocomplete-results li {
-//   width: 100%;
-//   padding: 20px 15px;
-//   border: 2px solid #46A095;
-// }
-// #autocomplete-results li:hover {
-//   background: #46A095;
-// }
-
-// #selected li {
-//   width: 48%;
-//   padding: 16px 15px;
-//   margin: 20px 0px;
-//   border-right: 2px solid #46A095;
-//   border-bottom: 2px solid #46A095;
-//   border-left: 2px solid #46A095;
-//   border-radius: 3px;
-//   display: inline-block;
-//   content: 'x';
-// }
-// #selected li:hover {
-//   background: #46A095;
-// }
-
-// .image-home {
-
-// }
 
 
 

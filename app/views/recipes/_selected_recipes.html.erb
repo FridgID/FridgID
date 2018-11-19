@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <% Recipe.all.sample(2).each do |r| %>
+      <div class="card">
+        <div class="card-image" style="background-image: linear-gradient(rgba(250,250,250,0.3), rgba(0,0,0,0)), url(<%= r.photo %>);">
+          <div class="card-like"><i class="far fa-heart"></i></div>
+        </div>
+        <div class="card-details">
+          <h4 class="title-h4"><%= r.shortened_title %></h4>
+          <div class="stats">
+            <% if @selected_ingrs %>
+              <p>
+                <i class="fas fa-check"></i>
+                <%= r.ingredients_match(@selected_ingrs) %>/<%= r.ingredients.count %> ingredients match
+              </p>
+            <% end %>
+            <p><i class="fas fa-seedling"></i><%= r.seasonal_score %>% in season</p>
+          </div>
+          <%= link_to "", recipe_path(r, i: @dash_ingrs), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
