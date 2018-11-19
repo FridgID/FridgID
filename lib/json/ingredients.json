@@ -13,5 +13,45 @@
     "name": "carrot",
     "from_month": "July",
     "to_month": "April"
+  },
+  {
+    "name": "butter",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "onion",
+    "from_month": "January",
+    "to_month": "December"
+  },
+  {
+    "name": "egg",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "garlic",
+    "from_month": "June",
+    "to_month": "October"
+  },
+  {
+    "name": "banana",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "sugar",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "beef",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "broccoli",
+    "from_month": "July",
+    "to_month": "October"
   }
 ]
