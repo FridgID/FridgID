@@ -12,6 +12,9 @@ User.create!(email: 'test@test.com', password: 'password')
 # require_relative '../lib/seed_json.rb'
 # puts "loading json seeds..."
 # json_ingredients
+# require_relative '../lib/parse_raw.rb'
+# puts "parsing raw..."
+# parse_raw
 # exit
 
 puts "create ingredients..."
