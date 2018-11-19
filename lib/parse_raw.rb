@@ -1,17 +1,26 @@
+# rubocop: disable all
 require 'date'
 
-class Ingr
-  def initialize(name, from, to)
-    @name = name
-    @from = from
-    @to = to
+# INGRS = {
+#   potato: { from: 'from_month', to: 'to_month'}
+# }
+INGRS = {}
+
+def show_result
+  INGRS.each do |k, v|
+    puts "[#{k}] #{v}"
   end
 end
 
-ingrs = []
-
 def add_ingr(ingr, month)
-  # if ingrs.map(&:name).include? ingr
+  ing = ingr.singularize
+  if INGRS[ing.to_sym]
+    # puts "* #{ing}"
+    INGRS[ing.to_sym][:to] = month
+  else
+    # puts "+ #{ing}"
+    INGRS[ing.to_sym] = { from: month, to: month }
+  end
 end
 
 def parse_raw
@@ -29,7 +38,7 @@ def parse_raw
     if month
       current_month = month
     else # ingredient
-      add_ingr(d, current_month)
+      add_ingr(d, Date::MONTHNAMES[current_month])
     end
     if current_month.nil?
       puts "First item has to be a month"
@@ -39,3 +48,4 @@ def parse_raw
 end
 
 parse_raw
+show_result
