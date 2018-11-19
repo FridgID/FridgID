@@ -1,5 +1,10 @@
-#footer {
+.footer-wrapper {
   background: $lighter-grey;
+  margin-top: 15px;
+
+}
+
+#footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
