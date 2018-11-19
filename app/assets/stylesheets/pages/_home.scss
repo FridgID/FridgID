@@ -37,10 +37,11 @@
   color: $teal;
 }
 
-.chosen-ingred {
+#chosen-ingred {
   color: $teal;
   font-weight: 700 !important; // this should be 500 or 600 font weight
   margin: 20px 2px;
+  margin: 5px 2px;
   display: flex;
   justify-content: flex-start;
 }
@@ -48,8 +49,40 @@
 #autocomplete-results {
   display: none;
   width: 96%;
-  margin-top: -2px;
-  color: #3C3C3C;
+  margin: 5px 0px;
+  &#autocomplete-results li {
+    padding: 5px 8px 3px 3px;
+    margin: 5px 2px;
+    border-right: 2px solid $orange;
+    border-bottom: 2px solid $orange;
+    border-left: 2px solid $orange;
+    border-radius: 3px;
+    &:hover {
+      border-right: 2px solid $hover-orange;
+      border-bottom: 2px solid $hover-orange;
+      border-left: 2px solid $hover-orange;
+      border-radius: 3px;
+      background: $hover-orange;
+    }
+  }
+}
+
+
+
+#selected li {
+  padding: 5px 8px 3px 3px;
+  margin: 5px 2px;
+  border-right: 2px solid $orange;
+  border-bottom: 2px solid $orange;
+  border-left: 2px solid $orange;
+  border-radius: 3px;
+  &:hover {
+    border-right: 2px solid $hover-orange;
+    border-bottom: 2px solid $hover-orange;
+    border-left: 2px solid $hover-orange;
+    border-radius: 3px;
+    background: $hover-orange;
+  }
 }
 
 ul, li {
@@ -63,30 +96,6 @@ ul, li {
 li {
   background-color: $orange;
   color: #FFFFFF;
-}
-
-#autocomplete-results li {
-  padding: 5px 8px 3px 3px;
-  margin: 5px 2px;
-  border-right: 2px solid $orange;
-  border-bottom: 2px solid $orange;
-  border-left: 2px solid $orange;
-  border-radius: 3px;
-}
-
-#autocomplete-results li:hover {
-  border: 2px solid $hover-orange;
-  background: $hover-orange;
-}
-
-#selected li {
-  padding: 5px 8px 3px 3px;
-  margin: 5px 2px;
-  border-right: 2px solid $orange;
-  border-bottom: 2px solid $orange;
-  border-left: 2px solid $orange;
-  border-radius: 3px;
-
 }
 
 #get-recipes-btn {

@@ -7,6 +7,7 @@ require 'date'
 INGRS = {}
 
 def show_result
+  puts "show result"
   INGRS.each do |k, v|
     puts "[#{k}] #{v}"
   end
@@ -16,6 +17,27 @@ def add_ingr(ingr, month)
   ing = ingr.singularize
   if INGRS[ing.to_sym]
     # puts "* #{ing}"
+    if INGRS[ing.to_sym][:swap] # special case
+      puts "skip special for #{ingr}"
+      return
+    else # no special
+      # check for special
+      if INGRS[ing.to_sym][:to]
+        if Date::MONTHNAMES.index(month) != Date::MONTHNAMES.index(INGRS[ing.to_sym][:to]) + 1
+          INGRS[ing.to_sym][:to] = INGRS[ing.to_sym][:from]
+          INGRS[ing.to_sym][:from] = month
+          INGRS[ing.to_sym][:swap] = true
+        end
+      else
+        if Date::MONTHNAMES.index(month) != Date::MONTHNAMES.index(INGRS[ing.to_sym][:from]) + 1
+          INGRS[ing.to_sym][:to] = INGRS[ing.to_sym][:from]
+          INGRS[ing.to_sym][:from] = month
+          INGRS[ing.to_sym][:swap] = true
+        end
+      end
+      puts "detect special for #{ingr}"
+      return
+    end
     INGRS[ing.to_sym][:to] = month
   else
     # puts "+ #{ing}"
@@ -46,6 +68,3 @@ def parse_raw
     end
   end
 end
-
-parse_raw
-show_result
