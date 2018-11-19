@@ -12,8 +12,30 @@
 }
 
 .filter {
+  font-size: 20px;
+  margin: 0px -6px;
+  padding: 0;
   display: flex;
   justify-content: flex-end;
+}
+
+.btn-filter {
+  color: $teal;
+  &:hover {
+    color: $orange;
+  }
+}
+
+.filter-buttons {
+  display: none;
+  color: $orange;
+  margin-left: 20px;
+  a {
+    color: $teal;
+    &:hover {
+      color: $orange;
+    }
+  }
 }
 
 .title-h4 {

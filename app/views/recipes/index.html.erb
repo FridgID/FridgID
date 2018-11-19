@@ -8,10 +8,12 @@
     <% end %>
   </h1>
   <div class="filter">
-    <h4 class="title-h4">Filter <i class="fas fa-filter"></i></h4>
-    <%= link_to 'season', recipes_path(order: 'season', i: params[:i]) %>
-    |
-    <%= link_to 'match', recipes_path(order: 'match', i: params[:i]) %>
+    <i class="fas fa-sort btn-filter" style="font-size: 32px"></i>
+    <div class="filter-buttons">
+      <%= link_to 'season', recipes_path(order: 'season', i: params[:i]) %>
+      |
+      <%= link_to 'match', recipes_path(order: 'match', i: params[:i]) %>
+    </div>
   </div>
   <div class="row">
     <% @recipes.each do |r| %>
@@ -36,5 +38,5 @@
     <% end %>
   </div>
 </div>
-
+<%= javascript_pack_tag 'filter' %>
 
