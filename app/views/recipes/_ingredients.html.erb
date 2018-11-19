@@ -1,11 +1,11 @@
 <ol>
   <% ingredients.each do |ing| %>
-    <% if ing.seasonal == 1 %>
-      <li style="background-color: #FB9738">
-    <% elsif ing.seasonal == 0 %>
-      <li style="background-color: #D73B2A">
+    <% if ing.seasonal == 0 %>
+      <li style="background-color: #ED8260">
+    <% elsif ing.seasonal == 1 %>
+      <li style="background-color: #BCBCBC">
     <% else %>
-      <li style="background-color: #396CC6">
+      <li style="background-color: #55C3B6">
     <% end %>
       <div class="checkbox">
         <div></div>
