@@ -43,6 +43,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @ingredients = @recipe.ingredients
     @stats = Ingredient.season_stats(@ingredients)
+    @selected = params[:i] ? params[:i].downcase.split('-') : []
   end
 
   def search
