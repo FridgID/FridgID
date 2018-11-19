@@ -20,6 +20,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'rest-client'
 gem 'httparty'
+gem 'nokogiri'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
