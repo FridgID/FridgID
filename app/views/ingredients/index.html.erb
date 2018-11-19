@@ -8,8 +8,8 @@
          <div id="autocomplete-container">
           <form action="#">
             <input type="text" placeholder="&#xf0fe     Add Ingredients" autofocus="true" id="autocomplete-input"></input>
-            <h5 class="chosen-ingred">Chosen ingredients:</h5>
             <ul id="autocomplete-results"></ul>
+            <h5 id="chosen-ingred" style="display: none;"">Chosen ingredients:</h5>
             <ul id="selected"></ul>
             <button id="get-recipes-btn">FIND YOUR RECIPE</button>
           </form>
@@ -43,4 +43,6 @@
 </div>
 
 <%= javascript_pack_tag 'ing-auto' %>
+<%= javascript_pack_tag 'search-active' %>
+
 
