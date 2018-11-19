@@ -27,7 +27,7 @@
             <% end %>
             <p><i class="fas fa-seedling"></i><%= r.seasonal_score %>% in season</p>
           </div>
-          <%= link_to "", recipe_path(r), class: "card-link" %>
+          <%= link_to "", recipe_path(r, i: @dash_ingrs), class: "card-link" %>
         </div>
       </div>
     <% end %>
