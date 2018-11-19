@@ -9,13 +9,17 @@
   function drawChart() {
     const data = google.visualization.arrayToDataTable([
       ['Season', 'ingredients'],
-      ['Not in season', <%= @stats[0] %>],
-      ['Without season', <%= @stats[1] %>],
+      ['Out of season', <%= @stats[0] %>],
+      ['No season', <%= @stats[1] %>],
       ['In season', <%= @stats[2] %>]
     ]);
     const options = {
       'width':300,
       'height':200,
+      'legend': {
+        'alignment': 'center',
+        'text-style': 'Open Sans'
+      },
       'slices': {
         0: { color: '#ED8260' },
         1: { color: '#BCBCBC' },
@@ -25,4 +29,6 @@
     const chart = new google.visualization.PieChart(document.getElementById('ing-chart'));
     chart.draw(data, options);
   }
+
 </script>
+

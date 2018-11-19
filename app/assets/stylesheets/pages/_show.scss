@@ -4,6 +4,55 @@
   height: 300px;
 }
 
+.title-h4-show {
+  color: $teal;
+  // background-color: $teal;
+  margin: 28px -6px 8px;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.title-h4-method {
+  color: white;
+  background-color: $teal;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 3px;
+}
+
+.method-description {
+  text-align: left;
+  line-height: 1.8em;
+}
+
+#btn-method {
+  color: white;
+  background-color: $teal;
+  margin: 10px 5px;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+  border: none;
+  border-radius: 3px;
+}
+
+#btn-ingrs {
+  color: white;
+  background-color: $teal;
+  margin: 10px 5px;
+  padding: 8px 18px;
+  font-family: Karla, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+  border: none;
+  border-radius: 3px;
+}
+
 .show-buttons {
   display: flex;
   justify-content: center;
@@ -17,93 +66,79 @@
   margin: auto;
 }
 
-.method-description {
-  text-align: left;
-  line-height: 1.8em;
+.ingreds-list {
+  position: relative;
+  height: 300px;
+  width: 325px;
 }
 
-.title-h4-show {
+.showing-list-1 {
+  // position: absolute;
   color: white;
-  background-color: $teal;
-  margin: 28px -6px 8px;
-  padding: 8px 18px;
-  font-family: Karla, sans-serif;
-  display: inline-block;
-  font-size: 1em;
-}
-
-.title-h4-method {
-  color: white;
-  background-color: $teal;
-  padding: 8px 18px;
-  font-family: Karla, sans-serif;
-  display: inline-block;
-  font-size: 1em;
-}
-
-#btn-method {
-  color: white;
-  background-color: $teal;
-  margin: 10px 5px;
-  padding: 8px 18px;
-  font-family: Karla, sans-serif;
-  font-size: 1.5em;
-  display: inline-block;
-  border: none;
-}
-
-#btn-ingrs {
-  color: white;
-  background-color: $teal;
-  margin: 10px 5px;
-  padding: 8px 18px;
-  font-family: Karla, sans-serif;
-  font-size: 1.5em;
-  display: inline-block;
-  border: none;
-}
-
-// QUICK hack on ol for presentation
-// TODO: rework that code and make it cleaner
-ol {
-  width: 300px;
-}
-
-ol li {
-  text-align: left;
+  padding: 10px 10px;
   width: 100%;
-  height: 50px;
   display: flex;
-  // justify-content: center;
-  justify-content: flex-start;
   align-items: center;
-  margin: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 1px 0px 5px 0px;
+}
+
+.showing-list-2 {
+  // position: absolute;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 1px 0px 5px 0px;
+}
+
+.showing-list-3 {
+  // position: absolute;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 1px 0px 5px 0px;
 }
 
 .checkbox {
   align-self: flex-start;
   margin: 5px;
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   border: 2px solid #fff;
 }
 
 .x1 {
-  background-color: #fff;
-  height: 10px;
+  background-color: $teal;
+  height: 2px;
   position: relative;
-  top: 15px;
+  top: 9px;
   transform: rotate(45deg);
 }
 
 .x2 {
-  background-color: #fff;
-  height: 10px;
+  background-color: $teal;
+  height: 2px;
   position: relative;
-  top: 5px;
+  top: 7px;
   transform: rotate(-45deg);
 }
 
-
+.selected-recipes {
+  width: 100%;
+  color: $teal;
+  font-weight: 400;// this should be 500 or 600 font weight
+  margin: 80px 2px;
+  display: flex;
+  justify-content: center;
+}
 
 
