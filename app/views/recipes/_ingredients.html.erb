@@ -8,8 +8,13 @@
       <li style="background-color: #55C3B6">
     <% end %>
       <div class="checkbox">
-        <div></div>
-        <div></div>
+        <% if selected.include? ing.name %>
+          <div class="x1"></div>
+          <div class="x2"></div>
+        <% else %>
+          <div></div>
+          <div></div>
+        <% end %>
       </div>
       <%= ing.name.upcase %>
     </li>
