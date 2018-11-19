@@ -29,7 +29,7 @@
 }
 .card {
   width: 48%;
-  height: 250px;
+  height: 235px;
   color: white;
   position: relative;
   text-align: center;
@@ -52,7 +52,6 @@
   line-height: 0.1;
   display: block;
   padding: 5px;
-
 }
 
 .card-like {
@@ -61,6 +60,11 @@
   right: 10px;
   font-size: 15px;
   text-transform: uppercase;
+}
+
+.stats {
+  position: absolute;
+  bottom: 0;
 }
 
 .stats p {
