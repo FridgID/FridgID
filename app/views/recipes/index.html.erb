@@ -9,6 +9,9 @@
   </h1>
   <div class="filter">
     <h4 class="title-h4">Filter <i class="fas fa-filter"></i></h4>
+    <%= link_to 'season', recipes_path(order: 'season', i: params[:i]) %>
+    |
+    <%= link_to 'match', recipes_path(order: 'match', i: params[:i]) %>
   </div>
   <div class="row">
     <% @recipes.each do |r| %>

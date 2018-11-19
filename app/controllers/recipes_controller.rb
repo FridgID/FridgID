@@ -18,9 +18,24 @@ class RecipesController < ApplicationController
       #   AND recipes.id = recipe_ingredients.recipe_id
       #   AND ingredients.name IN (#{@selected_ingrs.map { |i| "'" + i.to_s + "'" }.join(', ')})"
       # @recipes = Recipe.find_by_sql(insecure_query)
+
+      if params[:order] == "match"
+        @recipes = @recipes.sort do |a, b|
+          ma = a.ingredients_match(@selected_ingrs)
+          mb = b.ingredients_match(@selected_ingrs)
+          puts "ma=#{ma} mb=#{mb}"
+          mb <=> ma
+        end
+      end
     else
       @recipes = Recipe.all.limit(max_per_page)
       @selected_ingrs = nil
+    end
+
+    if params[:order] == "season"
+      @recipes = @recipes.sort do |a, b|
+        b.seasonal_score <=> a.seasonal_score
+      end
     end
   end
 
