@@ -63,7 +63,7 @@ autocompleteInput.addEventListener("keyup", (event) => {
         }
       });
       addDropDownListeners();
-      autocomplete_results.style.display = 'block';
+      autocomplete_results.style.display = 'flex';
       // console.log("selected stuff: " + getSelectedItems());
     });
 });

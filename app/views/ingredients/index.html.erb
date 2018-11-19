@@ -1,34 +1,46 @@
 <%= render 'shared/navbar_index' %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-lg-6">
-      <h2 class="title-index">WHAT TO EAT!</h2>
-       <div id="autocomplete-container">
-        <form action="#">
-          <input type="text" placeholder="&#xf0fe     Add Ingredients" autofocus="true" id="autocomplete-input"></input>
-          <h5 class="chosen-ingred">Chosen ingredients:</h5>
-          <ul id="autocomplete-results"></ul>
-          <ul id="selected"></ul>
-          <button id="get-recipes-btn">FIND YOUR RECIPE</button>
-        </form>
-      </div>
-      <%= image_tag 'food.png', class: 'image-food' %>
-    </div>
-  </div>
-
+<div class="wrapper">
+  <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-lg-6">
-        <h3 class="header-index">GET IN SEASON</h3>
-        <p>Want to help the planet and your own pocket. FrigdID wants to help you. Simply search what ingredients you have in your fridge and FridgID will find a recipe for you.</p>
-        <p>Not only will FridgID match your ingredients to a recipe but also will provide recipes of what is in season and reduce your global imprint.</p>
-        <p>Sign up to find out how to be better prepared for the seasons</p>
-        <button id="get-sign-in">SIGN IN</button>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2 class="title-index">WHAT TO EAT!</h2>
+         <div id="autocomplete-container">
+          <form action="#">
+            <input type="text" placeholder="&#xf0fe     Add Ingredients" autofocus="true" id="autocomplete-input"></input>
+            <h5 class="chosen-ingred">Chosen ingredients:</h5>
+            <ul id="autocomplete-results"></ul>
+            <ul id="selected"></ul>
+            <button id="get-recipes-btn">FIND YOUR RECIPE</button>
+          </form>
+        </div>
+        <%= image_tag 'food.png', class: 'image-food' %>
       </div>
     </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h3 class="header-index">GET IN SEASON</h3>
+          <p><i class="fab fa-pagelines"></i> Want to help the planet and your own pocket.</p>
+
+          <p><i class="fab fa-pagelines"></i> Want to eat better tasting food.</p>
+
+          <p><i class="fab fa-pagelines"></i> Want to help your local environment by purchasing seasonal and supporting local farmers.</p>
+
+          <p><i class="fab fa-pagelines"></i> By buying local and in season you are support your community.</p>
+
+          <p> FrigdID will help you achieve your goals. Simply search what ingredients you have in your fridge and FridgID will find a recipe for you.</p>
+          <p>Sign up to find out how to be better prepared for the seasons</p>
+          <button id="get-sign-in">SIGN UP</button>
+        </div>
+
+        <div class="selected-recipes">
+          <h4>What's in Season</h4>
+        </div>
+      </div>
+      <%= render 'recipes/selected_recipes' %>
   </div>
 </div>
-
 
 <%= javascript_pack_tag 'ing-auto' %>
 
