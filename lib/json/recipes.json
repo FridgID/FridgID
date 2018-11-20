@@ -9,6 +9,12 @@
       "onion",
       "egg",
       "garlic"
+    ],
+    "metrics": [
+      "100 g butter",
+      "2 onions",
+      "1 egg whisked",
+      "2 cloves of garlic"
     ]
   },
   {
@@ -20,6 +26,11 @@
       "sugar",
       "banana",
       "garlic"
+    ],
+    "metrics": [
+      "400 g sugar",
+      "4 bananas",
+      "2 cloves of garlic"
     ]
   },
   {
@@ -30,6 +41,10 @@
     "ingredients": [
       "beef",
       "broccoli"
+    ],
+    "metrics": [
+      "400 g beef",
+      "4 g broccoli"
     ]
   }
 ]
