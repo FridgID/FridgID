@@ -103,6 +103,12 @@ li {
   padding: 10px 10px;
   border: 2px solid $teal !important ;
   border-radius: 3px;
+  outline: none;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
 
 #get-sign-in  {
@@ -113,6 +119,11 @@ li {
   padding: 6px 10px;
   border: 2px solid $teal !important ;
   border-radius: 3px;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
 
 .seasonal-recipes {
