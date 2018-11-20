@@ -1,5 +1,225 @@
 [
   {
+    "name": "chicken",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "pasta",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "fish",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "bread",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "lamb",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "beef",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "cheese",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "pork",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "rice",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "turkey",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "goose",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "mussel",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "seafood",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "chocolate",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "duck",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "avocado",
+    "from_month": "October",
+    "to_month": "April"
+  },
+  {
+    "name": "butternut squash",
+    "from_month": "September",
+    "to_month": "November"
+  },
+  {
+    "name": "sweet potato",
+    "from_month": "January",
+    "to_month": "December"
+  },
+  {
+    "name": "sausage",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "salmon",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "sea bass ",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "courgette",
+    "from_month": "June",
+    "to_month": "October"
+  },
+  {
+    "name": "aubergine",
+    "from_month": "May",
+    "to_month": "October"
+  },
+  {
+    "name": "couscous",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "mince",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "kale",
+    "from_month": "September",
+    "to_month": "February"
+  },
+  {
+    "name": "potato",
+    "from_month": "January",
+    "to_month": "December"
+  },
+  {
+    "name": "spinach",
+    "from_month": "April",
+    "to_month": "October"
+  },
+  {
+    "name": "lentil",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "pork belly",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "rhubarb",
+    "from_month": "March",
+    "to_month": "August"
+  },
+  {
+    "name": "scallops",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "minced beef",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "steak",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "tofu",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "mackerel",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "mushroom",
+    "from_month": "August",
+    "to_month": "December"
+  },
+  {
+    "name": "beetroot",
+    "from_month": "January",
+    "to_month": "December"
+  },
+  {
+    "name": "leek",
+    "from_month": "August",
+    "to_month": "March"
+  },
+  {
+    "name": "cauliflower",
+    "from_month": "June",
+    "to_month": "November"
+  },
+  {
+    "name": "chorizo",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
+    "name": "asparagus",
+    "from_month": "May",
+    "to_month": "June"
+  },
+  {
+    "name": "broccoli",
+    "from_month": "June",
+    "to_month": "October"
+  },
+  {
+    "name": "tuna",
+    "from_month": "",
+    "to_month": ""
+  },
+  {
     "name": "apple",
     "from_month": "October",
     "to_month": "February"
@@ -36,8 +256,8 @@
   },
   {
     "name": "banana",
-    "from_month": "",
-    "to_month": ""
+    "from_month": "January",
+    "to_month": "December"
   },
   {
     "name": "sugar",
@@ -45,13 +265,229 @@
     "to_month": ""
   },
   {
-    "name": "beef",
-    "from_month": "",
-    "to_month": ""
+    "name": "cabbage",
+    "from_month": "November",
+    "to_month": "April"
   },
   {
-    "name": "broccoli",
+    "name": "celeriac",
+    "from_month": "October",
+    "to_month": "February"
+  },
+  {
+    "name": "celery",
+    "from_month": "September",
+    "to_month": "January"
+  },
+  {
+    "name": "chicory",
+    "from_month": "January",
+    "to_month": "December"
+  },
+  {
+    "name": "parsnip",
+    "from_month": "August",
+    "to_month": "April"
+  },
+  {
+    "name": "pear",
+    "from_month": "September",
+    "to_month": "February"
+  },
+  {
+    "name": "squash",
+    "from_month": "June",
+    "to_month": "February"
+  },
+  {
+    "name": "turnip",
+    "from_month": "June",
+    "to_month": "January"
+  },
+  {
+    "name": "artichoke",
+    "from_month": "March",
+    "to_month": "May"
+  },
+  {
+    "name": "cucumber",
+    "from_month": "June",
+    "to_month": "October"
+  },
+  {
+    "name": "radishes",
+    "from_month": "March",
+    "to_month": "October"
+  },
+  {
+    "name": "radishes",
+    "from_month": "March",
+    "to_month": "October"
+  },
+  {
+    "name": "sorrel",
+    "from_month": "March",
+    "to_month": "September"
+  },
+  {
+    "name": "watercress",
+    "from_month": "March",
+    "to_month": "December"
+  },
+  {
+    "name": "new potato",
+    "from_month": "April",
+    "to_month": "July"
+  },
+  {
+    "name": "rocket",
+    "from_month": "April",
+    "to_month": "October"
+  },
+  {
+    "name": "chillies",
+    "from_month": "May",
+    "to_month": "October"
+  },
+  {
+    "name": "elderflower",
+    "from_month": "May",
+    "to_month": "June"
+  },
+  {
+    "name": "lettuce",
+    "from_month": "May",
+    "to_month": "October"
+  },
+  {
+    "name": "pea",
+    "from_month": "May",
+    "to_month": "October"
+  },
+  {
+    "name": "pepper",
+    "from_month": "May",
+    "to_month": "September"
+  },
+  {
+    "name": "raspberry",
+    "from_month": "June",
+    "to_month": "September"
+  },
+  {
+    "name": "redcurrant",
+    "from_month": "June",
+    "to_month": "August"
+  },
+  {
+    "name": "samphire",
+    "from_month": "May",
+    "to_month": "September"
+  },
+  {
+    "name": "strawberry",
+    "from_month": "May",
+    "to_month": "September"
+  },
+  {
+    "name": "swiss chard",
+    "from_month": "June",
+    "to_month": "December"
+  },
+  {
+    "name": "blackberry",
+    "from_month": "June",
+    "to_month": "October"
+  },
+  {
+    "name": "blackcurrant",
+    "from_month": "June",
+    "to_month": "August"
+  },
+  {
+    "name": "blueberry",
+    "from_month": "July",
+    "to_month": "July"
+  },
+  {
+    "name": "broad beans",
+    "from_month": "June",
+    "to_month": "August"
+  },
+  {
+    "name": "cherry",
+    "from_month": "June",
+    "to_month": "August"
+  },
+  {
+    "name": "gooseberry",
+    "from_month": "June",
+    "to_month": "July"
+  },
+  {
+    "name": "fennel",
+    "from_month": "July",
+    "to_month": "August"
+  },
+  {
+    "name": "kohlrabi",
+    "from_month": "July",
+    "to_month": "September"
+  },
+  {
+    "name": "tomato",
     "from_month": "July",
     "to_month": "October"
-  }
+  },
+  {
+    "name": "mangetout",
+    "from_month": "August",
+    "to_month": "September"
+  },
+  {
+    "name": "plum",
+    "from_month": "August",
+    "to_month": "September"
+  },
+  {
+    "name": "mangetout",
+    "from_month": "August",
+    "to_month": "September"
+  },
+  {
+    "name": "pumpkin",
+    "from_month": "August",
+    "to_month": "September"
+  },
+  {
+    "name": "sweetcorn",
+    "from_month": "August",
+    "to_month": "October"
+  },
+  {
+    "name": "brussel sprouts",
+    "from_month": "September",
+    "to_month": "February"
+  },
+  {
+    "name": "mangetout",
+    "from_month": "August",
+    "to_month": "September"
+  },
+  {
+    "name": "butternut squash",
+    "from_month": "September",
+    "to_month": "November"
+  },
+  {
+    "name": "chestnuts",
+    "from_month": "October",
+    "to_month": "December"
+  },
+  {
+    "name": "red cabbage",
+    "from_month": "December",
+    "to_month": "December"
+  },
 ]
+
