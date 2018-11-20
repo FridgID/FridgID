@@ -4,7 +4,7 @@
   height: 300px;
 }
 
-.title-h4-show {
+.title-h5-show {
   color: $teal;
   // background-color: $teal;
   margin: 28px -6px 8px;
@@ -15,13 +15,12 @@
 }
 
 .title-h4-method {
-  color: white;
-  background-color: $teal;
-  padding: 8px 18px;
-  font-family: Karla, sans-serif;
-  display: inline-block;
-  font-size: 1em;
-  border-radius: 3px;
+  width: 100%;
+  color: $teal;
+  font-weight: 400;
+  margin: 80px 2px;
+  display: flex;
+  justify-content: center;
 }
 
 .method-description {
