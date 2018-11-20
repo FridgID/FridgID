@@ -19,6 +19,7 @@ def json_to_recipe(r)
     title: r['title'],
     description: r['description'],
     method: r['method'],
+    metrics: r['metrics'],
     photo: r['photo']
   )
 end
