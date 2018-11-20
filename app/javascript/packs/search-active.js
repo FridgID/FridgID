@@ -5,5 +5,5 @@ const chsnIngred = document.getElementById('chosen-ingred');
 
 // events
 autoInput.addEventListener('click', (e) => {
-  chsnIngred.style.display = "block";
+  chsnIngred.style.display = "flex";
 });

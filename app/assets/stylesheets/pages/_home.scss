@@ -40,9 +40,8 @@
 #chosen-ingred {
   color: $teal;
   font-weight: 700 !important; // this should be 500 or 600 font weight
-  margin: 20px 2px;
-  margin: 5px 2px;
-  display: flex;
+  margin: 18px 2px 5px 0px;
+  // display: flex !important;
   justify-content: flex-start;
 }
 
@@ -67,11 +66,9 @@
   }
 }
 
-
-
 #selected li {
   padding: 5px 8px 3px 3px;
-  margin: 5px 2px;
+  margin: 5px 0px;
   border-right: 2px solid $orange;
   border-bottom: 2px solid $orange;
   border-left: 2px solid $orange;
@@ -116,6 +113,15 @@ li {
   padding: 6px 10px;
   border: 2px solid $teal !important ;
   border-radius: 3px;
+}
+
+.seasonal-recipes {
+  width: 100%;
+  color: $teal;
+  font-weight: 400;// this should be 500 or 600 font weight
+  margin: 40px 2px;
+  display: flex;
+  justify-content: center;
 }
 
 .image-food {
