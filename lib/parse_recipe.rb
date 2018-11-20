@@ -91,6 +91,8 @@ rec_hash = {
   metrics: metrics
 }
 
-File.open("json/scrape_recipes.json","w") do |f|
+File.open("json/scrape_recipes.json","a") do |f|
   f.write(JSON.pretty_generate(rec_hash))
+  f.write(',')
+  f.puts
 end
