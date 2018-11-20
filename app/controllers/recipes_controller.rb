@@ -44,6 +44,9 @@ class RecipesController < ApplicationController
     @ingredients = @recipe.ingredients
     @stats = Ingredient.season_stats(@ingredients)
     @selected = params[:i] ? params[:i].downcase.split('-') : []
+    @metrics = @recipe.metrics.map do |m|
+      [m.last, @ingredients.find { |i| i.name == m.first }]
+    end.to_h
   end
 
   def search

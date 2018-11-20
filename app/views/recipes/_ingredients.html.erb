@@ -1,5 +1,5 @@
 <ol>
-  <% ingredients.each do |ing| %>
+  <% metrics.each do |metric, ing| %>
     <% if ing.seasonal == 0 %>
       <li style="background-color: #ED8260">
     <% elsif ing.seasonal == 1 %>
@@ -16,7 +16,10 @@
           <div></div>
         <% end %>
       </div>
-      <%= ing.name.upcase %>
+      <!-- Print debug info when there are more recipes -->
+      <% # ing.id %>
+      <% # ing.name.upcase %>
+      <%= metric %>
     </li>
   <% end %>
 </ol>
