@@ -15,3 +15,4 @@ yarn-error.log
 .env*
 lib/urls.txt
 lib/html/
+lib/json/scrape_recipes.json

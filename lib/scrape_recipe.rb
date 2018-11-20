@@ -2,6 +2,7 @@ require 'json'
 require 'nokogiri'
 require 'pry-byebug'
 
+puts "[+] ----------- [start] ------------ [+]"
 puts "[*] loading db ingredients..."
 db_ingrs = []
 data = JSON.parse(File.read('json/ingredients.json'))
@@ -72,14 +73,14 @@ doc.search('.recipe-ingredients .ingred-list').each do |element|
   end
 end
 
-puts "[+] finished!"
-puts "------------------------"
-puts "title: #{title}"
-puts "desc: #{desc}"
-puts "------------------------"
-puts "method: #{method}"
-puts "------------------------"
-puts "ingrs: #{metrics}"
+puts "[+] finished '#{title}' !"
+#puts "------------------------"
+#puts "title: #{title}"
+#puts "desc: #{desc}"
+#puts "------------------------"
+#puts "method: #{method}"
+#puts "------------------------"
+#puts "ingrs: #{metrics}"
 
 
 rec_hash = {
