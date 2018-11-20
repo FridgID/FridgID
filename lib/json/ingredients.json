@@ -5,11 +5,6 @@
     "to_month": ""
   },
   {
-    "name": "pasta",
-    "from_month": "",
-    "to_month": ""
-  },
-  {
     "name": "fish",
     "from_month": "",
     "to_month": ""
@@ -113,11 +108,6 @@
     "name": "aubergine",
     "from_month": "May",
     "to_month": "October"
-  },
-  {
-    "name": "couscous",
-    "from_month": "",
-    "to_month": ""
   },
   {
     "name": "mince",
@@ -253,11 +243,6 @@
     "name": "banana",
     "from_month": "January",
     "to_month": "December"
-  },
-  {
-    "name": "sugar",
-    "from_month": "",
-    "to_month": ""
   },
   {
     "name": "cabbage",
@@ -464,24 +449,8 @@
     "from_month": "December",
     "to_month": "December"
   },
-
-  {
-    "name": "salt",
-    "from_month": "",
-    "to_month": ""
-  },
-  {
-    "name": "lentil",
-    "from_month": "",
-    "to_month": ""
-  },
   {
     "name": "black pepper",
-    "from_month": "",
-    "to_month": ""
-  },
-  {
-    "name": "salt",
     "from_month": "",
     "to_month": ""
   },
@@ -786,18 +755,8 @@
     "to_month": ""
   },
   {
-    "name": "salt",
-    "from_month": "",
-    "to_month": ""
-  },
-  {
     "name": "bay leaf",
     "from_month": "",
     "to_month": ""
-  },
-  {
-    "name": "butter",
-    "from_month": "",
-    "to_month": ""
-  },
+  }
 ]
