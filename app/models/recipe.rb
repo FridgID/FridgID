@@ -1,6 +1,7 @@
 class Recipe < ApplicationRecord
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
+  serialize :metrics, JSON
 
   def shortened_title
     title.truncate(32)

@@ -19,6 +19,7 @@ def json_to_recipe(r)
     title: r['title'],
     description: r['description'],
     method: r['method'],
+    metrics: r['metrics'],
     photo: r['photo']
   )
 end
@@ -29,9 +30,9 @@ def json_recipes
   data.each do |r|
     puts "Recipe '#{r['title']}'"
     r_db = json_to_recipe(r)
-    r['ingredients'].each do |i|
-      # puts "+ #{i}"
-      i_db = Ingredient.find_by(name: i)
+    r['metrics'].each do |m|
+      # puts "+ #{m[0]}"
+      i_db = Ingredient.find_by(name: m[0])
       RecipeIngredient.create!(recipe_id: r_db.id, ingredient_id: i_db.id)
     end
     puts "ingredients: #{r_db.ingredients.count}"

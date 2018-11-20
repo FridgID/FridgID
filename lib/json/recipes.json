@@ -4,11 +4,11 @@
     "description": "This psychedelic Mediterranean-inspired salad marries bright, fresh ingredients with sweet, earthy roasted beets and perfectly cooked eggs. It tastes as good as it looks on the plate, and all the ingredients make for good snacks.",
     "method": "Spread the tzatziki on two serving plates and top with the eggs.In a medium bowl, combine the tomato, cucumber, chile flakes, radishes, poppy seeds, fresh herbs, and buttermilk. Season with a little sea salt. Broil or sauté the pickled beets to slightly caramelize and blister the outer surface. Top the eggs with the cucumber-tomato salad and the hot beets. Garnish with more herbs, a pinch of sumac, a little olive oil, and the pickling liquid from the beets.",
     "photo": "https://assets.epicurious.com/photos/58dd7f3639487313e3d24afc/6:4/w_620%2Ch_413/roasted-beet-tzatziki-salad-HC-033017.jpg",
-    "ingredients": [
-      "butter",
-      "onion",
-      "egg",
-      "garlic"
+    "metrics": [
+      ["butter", "100 g butter"],
+      ["onion", "2 onions"],
+      ["egg", "1 egg whisked"],
+      ["garlic", "2 cloves of garlic"]
     ]
   },
   {
@@ -16,10 +16,10 @@
     "description": "Sweet banana with garlic THE BEST!",
     "method": "Make banana sweet and put garlic in.",
     "photo": "https://media-cdn.tripadvisor.com/media/photo-s/0e/53/4f/32/we-turn-locally-grown.jpg",
-    "ingredients": [
-      "sugar",
-      "banana",
-      "garlic"
+    "metrics": [
+      ["sugar", "400 g sugar"],
+      ["banana", "4 bananas"],
+      ["garlic", "2 cloves of garlic"]
     ]
   },
   {
@@ -27,9 +27,9 @@
     "description": "It is nice vegan soup with beef",
     "method": "Take soup and put beef in and then some broccoli. Next step is making it vegan!",
     "photo": "https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fcleananddelicious.com%2Fwp-content%2Fuploads%2F2015%2F06%2FBroccoliStemSoup-CD.jpg&u=https://cleananddelicious.com/wp-content/uploads/2015/06/BroccoliStemSoup-CD.jpg",
-    "ingredients": [
-      "beef",
-      "broccoli"
+    "metrics": [
+      ["beef", "400 g beef"],
+      ["broccoli", "4 g broccoli"]
     ]
   }
 ]
