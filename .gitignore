@@ -16,3 +16,4 @@ yarn-error.log
 lib/urls.txt
 lib/html/
 lib/json/scrape_recipes.json
+lib/json/scrape_recipes.jsonSED
