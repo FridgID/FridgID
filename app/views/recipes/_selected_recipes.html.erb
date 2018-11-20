@@ -3,7 +3,7 @@
     <% Recipe.all.sample(2).each do |r| %>
       <div class="card">
         <div class="card-image" style="background-image: linear-gradient(rgba(250,250,250,0.3), rgba(0,0,0,0)), url(<%= r.photo %>);">
-          <div class="card-like"><i class="far fa-heart"></i></div>
+          <div class="card-like"><i class="fas fa-heart"></i></div>
         </div>
         <div class="card-details">
           <h4 class="title-h4"><%= r.shortened_title %></h4>

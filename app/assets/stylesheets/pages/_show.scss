@@ -4,32 +4,14 @@
   height: 300px;
 }
 
-.show-buttons {
-  display: flex;
-  justify-content: center;
-  position: sticky;
-  top: 0px;
-}
-
-.show-body {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.method-description {
-  text-align: left;
-  line-height: 1.8em;
-}
-
 .title-h4-show {
-  color: white;
-  background-color: $teal;
+  color: $teal;
+  // background-color: $teal;
   margin: 28px -6px 8px;
   padding: 8px 18px;
   font-family: Karla, sans-serif;
   display: inline-block;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .title-h4-method {
@@ -39,6 +21,12 @@
   font-family: Karla, sans-serif;
   display: inline-block;
   font-size: 1em;
+  border-radius: 3px;
+}
+
+.method-description {
+  text-align: left;
+  line-height: 1.8em;
 }
 
 #btn-method {
@@ -49,8 +37,16 @@
   font-family: Karla, sans-serif;
   font-size: 1.5em;
   display: inline-block;
-  border: none;
+  border: 1px solid $teal;
+  border-radius: 3px;
+  outline: none;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
+
 
 #btn-ingrs {
   color: white;
@@ -61,49 +57,104 @@
   font-size: 1.5em;
   display: inline-block;
   border: none;
+  border-radius: 3px;
+  outline: none;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
 
-// QUICK hack on ol for presentation
-// TODO: rework that code and make it cleaner
-ol {
-  width: 300px;
-}
-
-ol li {
-  text-align: left;
-  width: 100%;
-  height: 50px;
+.show-buttons {
   display: flex;
-  // justify-content: center;
-  justify-content: flex-start;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.show-body {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.ingreds-list {
+  // position: relative;
+  height: 300px;
+  width: 325px;
+}
+
+.showing-list-1 {
+  // position: absolute;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
   align-items: center;
-  margin: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 1px 0px 5px 0px;
+}
+
+.showing-list-2 {
+  // position: absolute;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 1px 0px 5px 0px;
+}
+
+.showing-list-3 {
+  // position: absolute;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 1px 0px 5px 0px;
 }
 
 .checkbox {
   align-self: flex-start;
   margin: 5px;
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   border: 2px solid #fff;
 }
 
 .x1 {
-  background-color: $teal;
-  height: 10px;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  height: 4px;
   position: relative;
-  top: 15px;
+  top: 6px;
   transform: rotate(45deg);
 }
 
 .x2 {
-  background-color: $teal;
-  height: 10px;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  height: 4px;
   position: relative;
-  top: 5px;
+  top: 2px;
   transform: rotate(-45deg);
 }
 
-
+.selected-recipes {
+  width: 100%;
+  color: $teal;
+  font-weight: 400;// this should be 500 or 600 font weight
+  margin: 80px 2px;
+  display: flex;
+  justify-content: center;
+}
 
 

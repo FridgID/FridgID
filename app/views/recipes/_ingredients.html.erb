@@ -1,11 +1,11 @@
-<ol>
+<div class="ingreds-list">
   <% metrics.each do |metric, ing| %>
     <% if ing.seasonal == 0 %>
-      <li style="background-color: #ED8260">
+      <div class="showing-list-1" style="background-color: #ED8260">
     <% elsif ing.seasonal == 1 %>
-      <li style="background-color: #BCBCBC">
+      <div class="showing-list-2" style="background-color: #BCBCBC">
     <% else %>
-      <li style="background-color: #55C3B6">
+      <div class="showing-list-3" style="background-color: #55C3B6">
     <% end %>
       <div class="checkbox">
         <% if selected.include? ing.name %>
@@ -20,9 +20,10 @@
       <% # ing.id %>
       <% # ing.name.upcase %>
       <%= metric %>
-    </li>
+      <%= ing.name.upcase %>
+    </div>
   <% end %>
-</ol>
+</div>
 
 <script>
   const bx = document.querySelectorAll('.checkbox');

@@ -4,12 +4,12 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h2 class="title-index">WHAT TO EAT!</h2>
+        <h2 class="title-index">WHAT TO EAT?</h2>
          <div id="autocomplete-container">
           <form action="#">
             <input type="text" placeholder="&#xf0fe     Add Ingredients" autofocus="true" id="autocomplete-input"></input>
-            <h5 class="chosen-ingred">Chosen ingredients:</h5>
             <ul id="autocomplete-results"></ul>
+            <h5 id="chosen-ingred" style="display: none;">Chosen ingredients:</h5>
             <ul id="selected"></ul>
             <button id="get-recipes-btn">FIND YOUR RECIPE</button>
           </form>
@@ -18,29 +18,33 @@
       </div>
     </div>
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h3 class="header-index">GET IN SEASON</h3>
-          <p><i class="fab fa-pagelines"></i> Want to help the planet and your own pocket.</p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="header-index">GET IN SEASON</h3>
+        <p><i class="fab fa-pagelines"></i> Want to help the planet and your own pocket.</p>
 
-          <p><i class="fab fa-pagelines"></i> Want to eat better tasting food.</p>
+        <p><i class="fab fa-pagelines"></i> Want to eat better tasting food.</p>
 
-          <p><i class="fab fa-pagelines"></i> Want to help your local environment by purchasing seasonal and supporting local farmers.</p>
+        <p><i class="fab fa-pagelines"></i> Want to help your local environment by purchasing seasonal and supporting local farmers.</p>
 
-          <p><i class="fab fa-pagelines"></i> By buying local and in season you are support your community.</p>
+        <p><i class="fab fa-pagelines"></i> By buying local and in season you are supporting your community.</p>
 
-          <p> FrigdID will help you achieve your goals. Simply search what ingredients you have in your fridge and FridgID will find a recipe for you.</p>
-          <p>Sign up to find out how to be better prepared for the seasons</p>
-          <button id="get-sign-in">SIGN UP</button>
-        </div>
+        <p> FrigdID will help you achieve your goals. Simply search what ingredients you have in your fridge and FridgID will find a recipe for you.</p>
 
-        <div class="selected-recipes">
-          <h4>What's in Season</h4>
-        </div>
+
+        <p>Sign up for our monthly newsletter to find out how to be better prepared for the seasons</p>
+        <button id="get-sign-in">GET OUR NEWSLETTER</button>
       </div>
-      <%= render 'recipes/selected_recipes' %>
+
+      <div class="seasonal-recipes">
+        <h4>CHECK OUT SELECTED SEASONAL RECIPES</h4>
+      </div>
+    </div>
+    <%= render 'recipes/selected_recipes' %>
   </div>
 </div>
 
 <%= javascript_pack_tag 'ing-auto' %>
+<%= javascript_pack_tag 'search-active' %>
+
 

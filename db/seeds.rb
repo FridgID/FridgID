@@ -13,10 +13,11 @@ require_relative '../lib/seed_json.rb'
 puts "loading json seeds..."
 json_ingredients
 json_recipes
-exit
 # require_relative '../lib/parse_raw.rb'
 # puts "parsing raw..."
 # parse_raw
+# show_result
+exit
 
 puts "create ingredients..."
 pkn = Ingredient.create!(name: 'pumpkin', from_month: 'August', to_month: 'December')

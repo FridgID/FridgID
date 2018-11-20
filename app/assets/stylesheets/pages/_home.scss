@@ -37,19 +37,49 @@
   color: $teal;
 }
 
-.chosen-ingred {
+#chosen-ingred {
   color: $teal;
   font-weight: 700 !important; // this should be 500 or 600 font weight
-  margin: 20px 2px;
-  display: flex;
+  margin: 18px 2px 5px 0px;
+  // display: flex !important;
   justify-content: flex-start;
 }
 
 #autocomplete-results {
   display: none;
   width: 96%;
-  margin-top: -2px;
-  color: #3C3C3C;
+  margin: 5px 0px;
+  &#autocomplete-results li {
+    padding: 5px 8px 3px 3px;
+    margin: 5px 2px;
+    border-right: 2px solid $orange;
+    border-bottom: 2px solid $orange;
+    border-left: 2px solid $orange;
+    border-radius: 3px;
+    &:hover {
+      border-right: 2px solid $hover-orange;
+      border-bottom: 2px solid $hover-orange;
+      border-left: 2px solid $hover-orange;
+      border-radius: 3px;
+      background: $hover-orange;
+    }
+  }
+}
+
+#selected li {
+  padding: 5px 8px 3px 3px;
+  margin: 5px 0px;
+  border-right: 2px solid $orange;
+  border-bottom: 2px solid $orange;
+  border-left: 2px solid $orange;
+  border-radius: 3px;
+  &:hover {
+    border-right: 2px solid $hover-orange;
+    border-bottom: 2px solid $hover-orange;
+    border-left: 2px solid $hover-orange;
+    border-radius: 3px;
+    background: $hover-orange;
+  }
 }
 
 ul, li {
@@ -65,38 +95,20 @@ li {
   color: #FFFFFF;
 }
 
-#autocomplete-results li {
-  padding: 5px 8px 3px 3px;
-  margin: 5px 2px;
-  border-right: 2px solid $orange;
-  border-bottom: 2px solid $orange;
-  border-left: 2px solid $orange;
-  border-radius: 3px;
-}
-
-#autocomplete-results li:hover {
-  border: 2px solid $hover-orange;
-  background: $hover-orange;
-}
-
-#selected li {
-  padding: 5px 8px 3px 3px;
-  margin: 5px 2px;
-  border-right: 2px solid $orange;
-  border-bottom: 2px solid $orange;
-  border-left: 2px solid $orange;
-  border-radius: 3px;
-
-}
-
 #get-recipes-btn {
   background-color: $teal !important;
   color: #FFFFFF;
   font-weight: bold;
-  margin: 5px 2px;
+  margin: 20px 2px;
   padding: 10px 10px;
   border: 2px solid $teal !important ;
   border-radius: 3px;
+  outline: none;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
 
 #get-sign-in  {
@@ -107,6 +119,20 @@ li {
   padding: 6px 10px;
   border: 2px solid $teal !important ;
   border-radius: 3px;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
+}
+
+.seasonal-recipes {
+  width: 100%;
+  color: $teal;
+  font-weight: 400;// this should be 500 or 600 font weight
+  margin: 40px 2px;
+  display: flex;
+  justify-content: center;
 }
 
 .image-food {
@@ -121,14 +147,6 @@ li {
   color: $teal;
 }
 
-.selected-recipes {
-  width: 100%;
-  color: $teal;
-  font-weight: 400;// this should be 500 or 600 font weight
-  margin: 20px 2px;
-  display: flex;
-  justify-content: center;
-}
 
 // .fa-globe {
 //   color: $teal;
