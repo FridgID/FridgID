@@ -37,9 +37,16 @@
   font-family: Karla, sans-serif;
   font-size: 1.5em;
   display: inline-block;
-  border: none;
+  border: 1px solid $teal;
   border-radius: 3px;
+  outline: none;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
+
 
 #btn-ingrs {
   color: white;
@@ -51,6 +58,12 @@
   display: inline-block;
   border: none;
   border-radius: 3px;
+  outline: none;
+  &:hover {
+    background: $hover-teal !important;
+    border: 2px solid $hover-teal !important ;
+    border-radius: 3px;
+  }
 }
 
 .show-buttons {
@@ -58,6 +71,7 @@
   justify-content: center;
   position: sticky;
   top: 0px;
+  z-index: 2;
 }
 
 .show-body {
@@ -67,7 +81,7 @@
 }
 
 .ingreds-list {
-  position: relative;
+  // position: relative;
   height: 300px;
   width: 325px;
 }
@@ -117,18 +131,20 @@
 }
 
 .x1 {
-  background-color: $teal;
-  height: 2px;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  height: 4px;
   position: relative;
-  top: 9px;
+  top: 6px;
   transform: rotate(45deg);
 }
 
 .x2 {
-  background-color: $teal;
-  height: 2px;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  height: 4px;
   position: relative;
-  top: 7px;
+  top: 2px;
   transform: rotate(-45deg);
 }
 
