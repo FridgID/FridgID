@@ -13,3 +13,7 @@ node_modules
 yarn-error.log
 .byebug_history
 .env*
+lib/urls.txt
+lib/html/
+lib/json/scrape_recipes.json
+lib/json/scrape_recipes.jsonSED
