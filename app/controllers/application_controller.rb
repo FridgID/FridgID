@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
     sign_in(@user)
   end
 
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
+
   # def self_authenticate_user
   #   if persistence_required?
   #     authenticate_user!

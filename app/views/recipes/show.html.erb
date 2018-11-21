@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@recipe.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @recipe.description %>
+<% content_for :meta_image, @recipe.photo %>
+
 <%= render 'shared/navbar_show', dash_ingrs: params[:i] %>
 <div class="container">
   <div class="row show-head">
