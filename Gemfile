@@ -21,6 +21,7 @@ gem 'webpacker'
 gem 'rest-client'
 gem 'httparty'
 gem 'nokogiri'
+gem 'rainbow'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
