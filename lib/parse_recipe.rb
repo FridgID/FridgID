@@ -169,7 +169,7 @@ rec_hash = {
   title: title,
   description: desc,
   method: method.join(' '),
-  photo: img_url,
+  photo: "http://#{img_url}",
   metrics: $metrics
 }
 

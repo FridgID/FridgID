@@ -43,12 +43,13 @@ def json_recipes
     r['metrics'].each do |m|
       # puts "+ #{m[0]}"
       i_db = Ingredient.find_by(name: m[0])
-      join = RecipeIngredient.new(recipe_id: r_db.id, ingredient_id: i_db.id)
-      if join.save
-        print "."
-      else
-        print "!"
-      end
+      RecipeIngredient.create!(recipe_id: r_db.id, ingredient_id: i_db.id)
+      # join = RecipeIngredient.new(recipe_id: r_db.id, ingredient_id: i_db.id)
+      # if join.save
+      #   print "."
+      # else
+      #   print "!"
+      # end
     end
     puts "]"
     puts "ingredients: #{r_db.ingredients.count}"
