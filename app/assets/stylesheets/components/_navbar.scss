@@ -4,7 +4,7 @@
   background: $teal;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,8 +95,9 @@
   color: white;
 }
 
-.far {
+.fa-user {
   color: white;
+  margin: 3px;
 }
 .fas {
   color: white;
