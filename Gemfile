@@ -22,13 +22,15 @@ gem 'rest-client'
 gem 'httparty'
 gem 'nokogiri'
 gem 'rainbow'
+gem 'json'
+gem 'pry-byebug'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
 group :development, :test do
-  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
