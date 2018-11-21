@@ -22,15 +22,19 @@
 
 .btn-filter {
   color: $teal;
+  font-size: 24px !important;
+  margin: 8px 0px;
   &:hover {
     color: $orange;
+    font-size: 24px !important;
   }
 }
 
 .filter-buttons {
   display: none;
   color: $orange;
-  margin-left: 20px;
+  margin: 8px 0px 8px 10px;
+  font-size: 16px;
   a {
     color: $teal;
     &:hover {
@@ -121,3 +125,4 @@
   color: $teal;
   opacity: 0.8;
 }
+
