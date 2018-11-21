@@ -1,3 +1,4 @@
+# rubocop: disable all
 require 'json'
 require 'rainbow'
 require 'nokogiri'
@@ -98,7 +99,7 @@ def tridi_grams(ingrs, raw_ing)
     pif "No tri or digrams"
   else
     pok "tridi found '#{tridi}'"
-    $metrics.push(tridi, raw_ing)
+    $metrics.push([tridi, raw_ing])
     return true
   end
   false
@@ -111,7 +112,7 @@ def single_word(ingrs, raw_ing)
   if col.count > 1
     pwr "WARNING! collision is bigger than 1"
   end
-  $metrics.push(col[0], raw_ing)
+  $metrics.push([col[0], raw_ing])
   true
 end
 
@@ -149,7 +150,7 @@ doc.search('.recipe-ingredients .ingred-list').each do |element|
       per "ingredient not found"
       puts "ingrs: #{ingrs}"
       # puts raw_ing.split.map(&:singularize)
-      $metrics.push("ERROR", "NOT IN DB")
+      # $metrics.push(["ERROR", "NOT IN DB"])
     end
   end
 end
@@ -168,7 +169,7 @@ rec_hash = {
   title: title,
   description: desc,
   method: method.join(' '),
-  photo: img_url,
+  photo: "http://#{img_url}",
   metrics: $metrics
 }
 
