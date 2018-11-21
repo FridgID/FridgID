@@ -17,3 +17,7 @@ lib/urls.txt
 lib/html/
 lib/json/scrape_recipes.json
 lib/json/scrape_recipes.jsonSED
+tools/urls.txt
+tools/html/
+tools/json/scrape_recipes.json
+tools/json/scrape_recipes.jsonSED

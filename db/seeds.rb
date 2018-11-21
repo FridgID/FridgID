@@ -9,7 +9,7 @@ Ingredient.destroy_all
 puts "create test user..."
 User.create!(email: 'test@test.com', password: 'password')
 
-require_relative '../lib/seed_json.rb'
+require_relative '../tools/seed_json.rb'
 puts "loading json seeds..."
 json_ingredients
 json_recipes

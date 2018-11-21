@@ -12,7 +12,7 @@ end
 # ingredients #
 ###############
 def json_ingredients
-  data = JSON.parse(File.read(Rails.root.to_s + '/lib/json/ingredients.json'))
+  data = JSON.parse(File.read(Rails.root.to_s + '/tools/json/ingredients.json'))
   data.each do |ing|
     puts "creating #{ing['name']} -> #{singular(ing['name'])}"
     Ingredient.create!(name: singular(ing['name']), from_month: ing['from_month'], to_month: ing['to_month'])
@@ -35,7 +35,7 @@ end
 
 # main
 def json_recipes
-  data = JSON.parse(File.read(Rails.root.to_s + '/lib/json/scrape_recipes.json'))
+  data = JSON.parse(File.read(Rails.root.to_s + '/tools/json/scrape_recipes.json'))
   data.each do |r|
     puts "Recipe '#{r['title']}'"
     print "ingredients ["
