@@ -1,21 +1,58 @@
 .footer-wrapper {
   background: $lighter-grey;
   margin-top: 15px;
-  height: 180px;
+  height: 250px;
   width: 100%;
-  padding: 30px 25px;
+  padding: 20px 0px;
 }
 
 #footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 75px;
   width: 100%;
   padding: 0px 10px;
   color: $dark-grey;
   margin-top: 15px;
   position: relative;
+}
+
+.list-nostyle-sign {
+  padding-bottom: 3px;
+  color: $light-grey;
+}
+
+.list-nostyle-seasons {
+  padding: 3px;
+  color: $light-grey;
+}
+
+.list-nostyle-about {
+  padding: 3px;
+  color: $light-grey;
+}
+
+.footer-links-p {
+  color: $light-grey;
+}
+.footer-links {
+  padding: 3px;
+  color: $light-grey;
+}
+
+.fab {
+  color: $light-grey;
+  padding: 0px 3px;
+
+}
+
+.fab:hover {
+  color: $teal;
+}
+
+.footer-copyright-p {
+  padding-top: 8px;
+  color: $light-grey
 }
 
 // .footer-links {
@@ -31,14 +68,8 @@
 //   padding: 0px 10px;
 // }
 
-// .fab {
-//   color: $dark-grey;
-//   padding: 0px 3px;
-// }
 
-// .fab:hover {
-//   color: $teal;
-// }
+
 
 // .list-nostyle {
 //   background-color: $lighter-grey;
