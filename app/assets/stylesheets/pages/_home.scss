@@ -68,7 +68,7 @@
 
 #selected li {
   padding: 5px 8px 3px 3px;
-  margin: 5px 0px;
+  margin: 5px 2px;
   border-right: 2px solid $orange;
   border-bottom: 2px solid $orange;
   border-left: 2px solid $orange;
@@ -137,10 +137,10 @@ li {
 
 .image-food {
   width: 300px;
-  height: 365px;
+  // height: 365px;
   background-image: url('food.png' );
   background-repeat: no-repeat;
-  margin: 80px 50px;
+  margin: 70px 40px;
 }
 
 .fa-pagelines {
