@@ -7,16 +7,14 @@
     <% else %>
       <div class="showing-list" style="background-color: #55C3B6">
     <% end %>
-      <div>
-        <div class="checkbox">
-          <% if selected.include? ing.name %>
-            <div class="x1"></div>
-            <div class="x2"></div>
-          <% else %>
-            <div></div>
-            <div></div>
-          <% end %>
-        </div>
+      <div class="checkbox">
+        <% if selected.include? ing.name %>
+          <div class="x1"></div>
+          <div class="x2"></div>
+        <% else %>
+          <div></div>
+          <div></div>
+        <% end %>
       </div>
       <!-- Print debug info when there are more recipes -->
       <% # ing.id %>
