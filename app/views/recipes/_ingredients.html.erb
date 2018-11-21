@@ -1,11 +1,11 @@
 <div class="ingreds-list">
   <% metrics.each do |metric, ing| %>
     <% if ing.seasonal == 0 %>
-      <div class="showing-list-1" style="background-color: #ED8260">
+      <div class="showing-list" style="background-color: #ED8260">
     <% elsif ing.seasonal == 1 %>
-      <div class="showing-list-2" style="background-color: #BCBCBC">
+      <div class="showing-list" style="background-color: #BCBCBC">
     <% else %>
-      <div class="showing-list-3" style="background-color: #55C3B6">
+      <div class="showing-list" style="background-color: #55C3B6">
     <% end %>
       <div class="checkbox">
         <% if selected.include? ing.name %>

@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@recipe.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @recipe.description %>
+<% content_for :meta_image, @recipe.photo %>
+
 <%= render 'shared/navbar_show', dash_ingrs: params[:i] %>
 <div class="container">
   <div class="row show-head">
@@ -11,8 +15,8 @@
     </div>
   </div>
   <div class="row show-buttons">
-    <button id="btn-method">COOK IT</button>
     <button id="btn-ingrs">INGREDIENTS</button>
+    <button id="btn-method">COOK IT</button>
   </div>
   <div class="row show-body">
     <div id="page-method" style="display: none;">
@@ -23,8 +27,8 @@
     </div>
     </div>
 
-    <div>
-      <h4 class="selected-recipes">CHECK OUT SELECTED SEASONAL RECIPES</h4>
+  <div>
+  <h4 class="selected-recipes">CHECK OUT SELECTED SEASONAL RECIPES</h4>
       <%= render 'recipes/selected_recipes' %>
   </div>
 </div>

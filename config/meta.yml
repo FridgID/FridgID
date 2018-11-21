@@ -1,0 +1,5 @@
+meta_product_name: "FridgID"
+meta_title: "FridgID - Find your recipe"
+meta_description: "Don't let your fridge-food go to waste! Use FridgID and discover delicious seasonal recipes that match the ingredients you already have at home"
+meta_image: "meta_image.png"                       # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
