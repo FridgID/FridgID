@@ -111,7 +111,7 @@ li {
   }
 }
 
-#get-sign-in  {
+#get-sign-in {
   background-color: $teal !important;
   color: #FFFFFF;
   font-weight: bold;
@@ -159,6 +159,13 @@ li {
   height: 25%;
 }
 
+#experience-header {
+  border: 2px solid #55C3B6;
+  border-radius: 3px;
+  background-color: #55C3B6;
+  color: #FFFFFF;
+  margin: 20px 0px;
+}
 
 // .fa-globe {
 //   color: $teal;
