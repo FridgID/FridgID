@@ -184,7 +184,7 @@ img_url = "http://#{img_url}"
 if img_flag
   img_path = "img/#{file_num}.jpg"
   pok 'downloading image...'
-  `wget -O #{img_path} #{imp_url}`
+  `wget -O #{img_path} #{img_url}`
 end
 
 
