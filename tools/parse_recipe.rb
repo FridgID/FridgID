@@ -57,14 +57,13 @@ method = "not found"
 $metrics = []
 
 nokdesc = doc.search('.recipe-intro')
-if nokdesc
+if nokdesc && nokdesc.children[0]
   desc = nokdesc.children[0].text
 else
   pif "desc not found try subheading"
   noksub = doc.search('.subheading')
   if noksub
     desc = noksub.children[0].text
-    binding.pry
   else
     per "subheading not found!"
   end
