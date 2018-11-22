@@ -170,7 +170,7 @@ pok "finished '#{title}' !"
 rec_hash = {
   title: title,
   description: desc,
-  method: method.join(' '),
+  method: method, #.join(' '),
   photo: "http://#{img_url}",
   metrics: $metrics
 }
