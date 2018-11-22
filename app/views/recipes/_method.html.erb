@@ -1,15 +1,15 @@
-<p><em><%= recipe.description %></em></p>
+<p class="recipe-desc"><em><%= recipe.description %></em></p>
 
-<h5 class="title-h4-method">HOW TO</h5>
+<h5 class="title-h4-method">PREPARATION</h5>
 
 <p class="method-description">
-  <ul>
+
     <% recipe.method.each do |method| %>
-      <li>
+      <p>
         <%= method %>
-      </li>
+      </p>
     <% end %>
-  </ul>
+
 </p>
 
 

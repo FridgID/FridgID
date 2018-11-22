@@ -28,7 +28,7 @@
   width: 100%;
   color: $teal;
   font-weight: 400;
-  margin: 80px 2px;
+  margin: 20px 2px;
   display: flex;
   justify-content: center;
 }
@@ -36,6 +36,7 @@
 .method-description {
   text-align: left;
   line-height: 1.8em;
+  background-color: none;
 }
 
 #btn-method {
@@ -82,6 +83,7 @@
   position: sticky;
   top: 70px;
   z-index: 2;
+  margin-top: 20px;
 }
 
 .show-body {
@@ -154,5 +156,12 @@
   display: flex;
   justify-content: center;
 }
+
+.recipe-desc{
+  padding: 0px;
+  text-align: left;
+  margin-top: 10px;
+}
+
 
 
