@@ -44,14 +44,25 @@ desc = "not found"
 method = "not found"
 $metrics = []
 
-doc.search('.recipe-intro').each do |element|
-  # binding.pry
-  desc =  element.children[0].text
+nokdesc = doc.search('.recipe-intro')
+if nokdesc
+  desc = nokdesc.children[0].text
+else
+  pif "desc not found try subheading"
+  noksub = doc.search('.subheading')
+  if noksub
+    desc = noksub.children[0].text
+    binding.pry
+  else
+    per "subheading not found!"
+  end
 end
 
 noktitle = doc.search('.single-recipe-details .hidden-xs').first.text
 if noktitle
   title = noktitle
+else
+  per "title not found"
 end
 
 e = doc.search('.recipe-container picture img')
