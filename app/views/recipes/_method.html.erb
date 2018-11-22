@@ -2,6 +2,14 @@
 
 <h5 class="title-h4-method">HOW TO</h5>
 
-<p class="method-description"><%= recipe.method %></p>
+<p class="method-description">
+  <ul>
+    <% recipe.method.each do |method| %>
+      <li>
+        <%= method %>
+      </li>
+    <% end %>
+  </ul>
+</p>
 
 

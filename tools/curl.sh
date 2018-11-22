@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ferrors=0
+ffish=0
 
 function fetch_recipe() {
   ri=`printf "%03d\n" $1` # create zer0 padded index
@@ -19,6 +20,12 @@ function fetch_recipe() {
     sleep 30
     fetch_recipe $1 #recursive call
     # cat html/$ri.html
+  fi
+
+  if grep -q "<html><head></head><body><script>" "html/$ri.html"; then
+    echo "[!] fishy content spottet num=$ri"
+    ffish=$((ffish + 1))
+    sleep 5
   fi
 }
 
@@ -56,6 +63,7 @@ done < urls.txt
 
 echo "-------- finished --------"
 echo "friendly errors: $ferrors"
+echo "fishy pages: $ffish"
 echo "start at: $load"
 echo "stop at: $i"
 echo "total lines: $line_num"

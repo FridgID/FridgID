@@ -35,6 +35,18 @@ $db_hash = $db_ingrs.map {|i| [i, i]}.to_h
 pok "loaded #{$db_ingrs.count} ingredients!"
 
 path = ARGV[0] ? ARGV[0] : 'html/001.html'
+img_flag = false
+if ARGV[1]
+  img_flag = true if ARGV[1] == 'dl=img'
+end
+
+if img_flag
+  pok "donwload image flag is ON"
+else
+  pif "download image flag is OFF"
+end
+
+file_num = path[path.index('/')+1..path.index('.')-1]
 
 html_content = open(path).read
 doc = Nokogiri::HTML(html_content)
@@ -44,14 +56,24 @@ desc = "not found"
 method = "not found"
 $metrics = []
 
-doc.search('.recipe-intro').each do |element|
-  # binding.pry
-  desc =  element.children[0].text
+nokdesc = doc.search('.recipe-intro')
+if nokdesc && nokdesc.children[0]
+  desc = nokdesc.children[0].text
+else
+  pif "desc not found try subheading"
+  noksub = doc.search('.subheading')
+  if noksub
+    desc = noksub.children[0].text
+  else
+    per "subheading not found!"
+  end
 end
 
 noktitle = doc.search('.single-recipe-details .hidden-xs').first.text
 if noktitle
   title = noktitle
+else
+  per "title not found"
 end
 
 e = doc.search('.recipe-container picture img')
@@ -157,6 +179,15 @@ doc.search('.recipe-ingredients .ingred-list').each do |element|
   end
 end
 
+img_url = "http://#{img_url}"
+assets_path = "recipes/#{file_num}.jpg"
+if img_flag
+  img_path = "img/#{file_num}.jpg"
+  pok 'downloading image...'
+  `wget --quiet -O #{img_path} #{img_url}`
+end
+
+
 pok "finished '#{title}' !"
 #puts "------------------------"
 #puts "title: #{title}"
@@ -170,8 +201,8 @@ pok "finished '#{title}' !"
 rec_hash = {
   title: title,
   description: desc,
-  method: method.join(' '),
-  photo: "http://#{img_url}",
+  method: method, #.join(' '),
+  photo: assets_path, #img_url,
   metrics: $metrics
 }
 
