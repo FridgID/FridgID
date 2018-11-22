@@ -25,6 +25,7 @@ end
 pok "----------- [start] ------------"
 pif "loading db ingredients..."
 $db_ingrs = []
+$failed_metrics = []
 data = JSON.parse(File.read('json/ingredients.json'))
 data.each do |d|
   $db_ingrs.push(d['name'])
@@ -149,6 +150,7 @@ doc.search('.recipe-ingredients .ingred-list').each do |element|
 
       per "ingredient not found"
       puts "ingrs: #{ingrs}"
+      $failed_metrics.push(ingrs)
       # puts raw_ing.split.map(&:singularize)
       # $metrics.push(["ERROR", "NOT IN DB"])
     end
@@ -177,4 +179,11 @@ File.open("json/scrape_recipes.json","a") do |f|
   f.write(JSON.pretty_generate(rec_hash))
   f.write(',')
   f.puts
+end
+
+if $failed_metrics.count > 0
+  File.open('failed.txt', 'a') do |f|
+    f.puts "===[ #{title} ]==="
+    f.puts $failed_metrics.join(' ')
+  end
 end
