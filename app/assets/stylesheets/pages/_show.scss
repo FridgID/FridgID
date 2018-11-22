@@ -1,7 +1,19 @@
 .show-head {
   display: flex;
   justify-content: center;
-  height: 300px;
+  height: 330px;
+  & p {
+    text-align: center;
+  }
+}
+
+.show-image {
+  height: 280px;
+  background-size: cover !important;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  border-radius: 3px 0px 0px 0px;
 }
 
 .title-h4-show {
@@ -155,4 +167,7 @@
   justify-content: center;
 }
 
+.fa-seedling {
+  color: $teal;
+}
 

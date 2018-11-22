@@ -30,7 +30,11 @@
                 <%= r.ingredients_match(@selected_ingrs) %>/<%= r.ingredients.count %> ingredients match
               </p>
             <% end %>
-            <p><i class="fas fa-seedling"></i><%= r.seasonal_score %>% in season</p>
+            <p>Season:
+              <% r.seasonal_rating.times do %>
+                <i class="fas fa-seedling"></i>
+              <% end %>
+            </p>
           </div>
           <%= link_to "", recipe_path(r, i: @dash_ingrs), class: "card-link" %>
         </div>
