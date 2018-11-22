@@ -180,10 +180,11 @@ doc.search('.recipe-ingredients .ingred-list').each do |element|
 end
 
 img_url = "http://#{img_url}"
+assets_path = "recipes/#{file_num}.jpg"
 if img_flag
   img_path = "img/#{file_num}.jpg"
   pok 'downloading image...'
-  `wget -O #{img_path} #{img_url}`
+  `wget --quiet -O #{img_path} #{img_url}`
 end
 
 
@@ -201,7 +202,7 @@ rec_hash = {
   title: title,
   description: desc,
   method: method, #.join(' '),
-  photo: img_url,
+  photo: assets_path, #img_url,
   metrics: $metrics
 }
 
