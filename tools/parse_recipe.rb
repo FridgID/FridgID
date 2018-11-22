@@ -35,6 +35,18 @@ $db_hash = $db_ingrs.map {|i| [i, i]}.to_h
 pok "loaded #{$db_ingrs.count} ingredients!"
 
 path = ARGV[0] ? ARGV[0] : 'html/001.html'
+img_flag = false
+if ARGV[1]
+  img_flag = true if ARGV[1] == 'dl=img'
+end
+
+if img_flag
+  pok "donwload image flag is ON"
+else
+  pif "download image flag is OFF"
+end
+
+file_num = path[path.index('/')+1..path.index('.')-1]
 
 html_content = open(path).read
 doc = Nokogiri::HTML(html_content)
@@ -168,6 +180,14 @@ doc.search('.recipe-ingredients .ingred-list').each do |element|
   end
 end
 
+img_url = "http://#{img_url}"
+if img_flag
+  img_path = "img/#{file_num}.jpg"
+  pok 'downloading image...'
+  `wget -O #{img_path} #{imp_url}`
+end
+
+
 pok "finished '#{title}' !"
 #puts "------------------------"
 #puts "title: #{title}"
@@ -182,7 +202,7 @@ rec_hash = {
   title: title,
   description: desc,
   method: method, #.join(' '),
-  photo: "http://#{img_url}",
+  photo: img_url,
   metrics: $metrics
 }
 
