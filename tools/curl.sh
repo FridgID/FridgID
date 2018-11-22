@@ -10,6 +10,8 @@ function fetch_recipe() {
   # echo "start $startindx end $length"
   echo "curl [..]${l:$startindx:$length} > $ri.html ..."
   curl $l 2>/dev/null > html/$ri.html
+  # debug
+  # echo "$l" > html/$ri.html
 
   if grep -q "friendly error page" "html/$ri.html"; then
     echo "[!] friendly error (retry) num=$ri"
@@ -34,7 +36,13 @@ elif [ $i -gt 1 ]; then
 fi
 load=$i
 
+line_num=0
 while read l; do
+  line_num=$((line_num + 1))
+  if [ "$line_num" -le $load ]; then
+    echo "skipping $line_num"
+    continue
+  fi
   i=$((i + 1))
   fetch_recipe $i
   mod=$((i % 5))
@@ -44,9 +52,10 @@ while read l; do
     sleep 5
   fi
   # sleep 5
-done <urls.txt
+done < urls.txt
 
 echo "-------- finished --------"
 echo "friendly errors: $ferrors"
 echo "start at: $load"
-echo "total: $i"
+echo "stop at: $i"
+echo "total lines: $line_num"

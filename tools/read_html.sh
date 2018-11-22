@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "delete failed.txt"
+rm failed.txt
+
 echo "parsing html/*.html to json"
 echo "delete old parsed file..."
 echo "[" > json/scrape_recipes.json
