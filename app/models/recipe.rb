@@ -31,4 +31,13 @@ class Recipe < ApplicationRecord
     # puts "recipe: #{title}"
     # puts "score #{score} / #{max}"
   end
+
+  def seasonal_rating
+    rating = 0
+    ingredients.each do |ingr|
+      rating += ingr.seasonal
+    end
+    max = ingredients.count * 2
+    (rating * 10 / max)
+  end
 end
