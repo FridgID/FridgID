@@ -58,7 +58,7 @@ while read l; do
     echo "Chillin' to avoid getting blocked"
     sleep 5
   fi
-  # sleep 5
+  sleep 3
 done < urls.txt
 
 echo "-------- finished --------"
